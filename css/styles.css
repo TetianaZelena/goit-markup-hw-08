@@ -1,0 +1,91 @@
+:root {--primary-text-color: #757575;
+    --title-text-color: #212121;
+    --accent-color: #2196F3;
+}
+
+body {background-color: #E5E5E5; color: #757575;
+}
+
+header {background-color: #fff;}
+
+a {text-decoration: none;
+}
+
+.list { list-style-type: none;  
+}
+
+/*Логотип*/
+.logo {color: #000;
+}
+
+.logo:hover, 
+.logo:focus { color: var(--accent-color);
+} 
+
+.logo-web { color: var(--accent-color);
+}
+
+/*menu navigation*/
+.site-nav .link { color: var(--accent-color);
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus { color: #212121;
+} 
+
+/*contact*/
+.contact-list .link { color: var(--accent-color)
+    
+}
+
+.contact-list .link:hover,
+.contact-list .link:focus {color: #757575;
+}
+
+/*hero*/
+.hero { background-color: #2F303A;
+}
+
+.hero-title {color: #fff;
+}
+
+.booking {color: #fff;
+}
+
+/*section*/
+.section-title {color: var(--title-text-color)
+}
+
+/*advantages*/
+.advantages-list .title {color: var(--title-text-color);
+}
+
+.team { background: #F5F4FA;}
+
+/*our team*/
+.team-list .title { color: var(--title-text-color);
+}
+
+
+/*what we do*/
+.we-do-list { }
+
+/*footer*/
+.footer { background-color: #2F303A;
+}
+
+.footer-logo { color: #fff;
+}
+
+.location { color: #fff;
+}
+
+.location .contact { color: rgba(255, 255, 255, 0.6);
+}
+
+/* цвет не активній  #757575* цвет акцент  ховер при наведении на ссілку голубой color: #2196F3*/
+/*цвет лого текста color: #2196F3*/
+/*цвет основного текста #757575 */
+/*цвет заголоков #212121*/
+/*цвет наша команда бекграунд  #F5F4FA */
+/*цвет футер бекграунд  #2F303A*/
