@@ -84,10 +84,11 @@ a { text-decoration: none;
 
 /*footer*/
 .footer { background-color: var(--hero-foot-bg-color);
+    
 }
 
 /*footer address*/
-.location { color: var(--whate-laetters); font-weight: var(--font-text);font-size: 14px; line-height: 1.71;
+.location { color: var(--whate-laetters); font-style: normal; font-weight: var(--font-text);font-size: 14px; line-height: 1.71;
 }
 
 .contact { color: rgba(255, 255, 255, 0.6); font-weight: var(--font-text);   font-size: 14px; line-height: 1.71;
