@@ -4,15 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebStudio</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"/>
     
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/styles.css"/>
 </head>
 <body>
-    <header>
+    <header class="header">
         <!--navigation -->
-        <nav>
+<!--conteiner 1-->
+        <div class="container"> 
+            <div class="container-nav">
+            <nav class="nav-menu">
             <!--Logo -->
             <a href="./index.html" class="logo"><span class="logo-web">Web</span>Studio</a>
             <!-- menu navigation -->
@@ -23,44 +27,56 @@
             </ul>
         </nav>
         <!--contacts  -->
-        <ul class="contact-list list">
-            <li> <a href="mailto:info@devstudio.com" class="link">info@devstudio.com</a></li>
-            <li> <a href="tel:+380961111111" class="link">+38 096 111 11 11</a></li>
-        </ul>
+            
+            <ul class="contact-list list">
+                <li> <a href="mailto:info@devstudio.com"     class="link">info@devstudio.com</a></li>
+                <li> <a href="tel:+380961111111" class="link">+38 096     111 11 11</a></li>
+            </ul>
+            </div>
+            
+        </div>        
+<!--conteiner-->
     </header>
     <main>
         <!--Hero  -->
         <section class="hero">
-            <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-            <a href="#" class="button">Заказать услугу</a>
+<!--conteiner 2-->
+            <div class="container">
+                <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
+                <a href="#" class="button">Заказать услугу</a>
+            </div>
         </section> 
+<!--conteiner--> 
         <section class="section">
         <!-- the advantages(преимущества)-->
-            <ul class="advantages-list list">
-                <li> <h3 class="title">Внимание к деталям</h3>
-                    <p class="text">Идейные соображения, а также начало повседневной работы по формированию позиции.</p> </li>
-                <li> <h3 class="title">Пунктуальность</h3>
-                    <p class="text">Задача организации, в особенности же рамки и место обучения кадров влечет за собой.</p> </li>
-                <li> <h3 class="title">Планирование</h3>
-                    <p class="text">Равным образом консультация с широким активом в значительной степени обуславливает.</p> </li>
-                <li> <h3 class="title">Современные технологии</h3>
-                    <p class="text">Значимость этих проблем настолько очевидна, что реализация плановых заданий.</p> </li>
+<!--conteiner 3-->            
+        <div class="container"> 
+                <ul class="advantages-list list">
+                    <li> <h3 class="title">Внимание к деталям</h3>
+                            <p class="text">Идейные соображения, а также начало повседневной работы по формированию позиции.</p> </li>
+                    <li> <h3 class="title">Пунктуальность</h3>
+                            <p class="text">Задача организации, в особенности же рамки и место обучения кадров влечет за собой.</p> </li>
+                    <li> <h3 class="title">Планирование</h3>
+                            <p class="text">Равным образом консультация с широким активом в значительной степени обуславливает.</p> </li>
+                    <li> <h3 class="title">Современные технологии</h3>
+                            <p class="text">Значимость этих проблем настолько очевидна, что реализация плановых заданий.</p> </li>
                 </ul>       
-            <!--what are we do-->  
+        <!--what are we do-->  
                 <h2 class="section-title">Чем мы занимаемся</h2>  
-                <ul class="we-do-list list">
-                    <li> 
-                        <img src="./images/img.jpg" alt="hands typing code" height="294" width="370"/> 
+                    <ul class="we-do-list list">
+                        <li> <img src="./images/img.jpg" alt="hands typing code" height="294" width="370"/> 
                         </li>
-                    <li> 
-                        <img src="./images/img_1.jpg" alt= "hands hold phone and laptop is on" height="294" width="370"/> </li>
-                    <li>  
-                        <img src="./images/img_2.jpg" alt= "hends hold tablet and pen" height="294" width="370"/> </li>
-                </ul>  
+                        <li> <img src="./images/img_1.jpg" alt= "hands hold phone and laptop is on" height="294" width="370"/> </li>
+                        <li> <img src="./images/img_2.jpg" alt= "hends hold tablet and pen" height="294" width="370"/> </li>
+                    </ul>  
+            </div>        
+<!--conteiner-->            
         </section>
         <!--Our team -->
         <section class="section team">
-            <h2 class="section-title">Наша команда</h2>
+<!--conteiner 4-->             
+            <div class="container">
+                <h2 class="section-title">Наша команда</h2>
             <ul class="team-list list">
                 
                 <li><img src="./images/img_man_broun_tshirt.jpg" alt="the smiling man with glasses on his face" width="270" height="260" />
@@ -75,16 +91,22 @@
                 <li> <img src="./images/img_man_black_tsirt.jpg" alt="the smiling man with glasses wearing a black t-shirt" width="270" height="260"/>                 
                 <h3 class="title">Михаил Ермаков</h3> <p>UI Designer</p>  </li>
             </ul>
+            </div>
+<!--conteiner-->            
         </section>
     </main>
     <footer class="footer">
-        <a href="./index.html" class="logo"><span class="logo-web">Web</span><span  class="footer-logo">Studio</span></a>
+<!--conteiner 5--> 
+        <div class="container">
+                <a href="./index.html" class="logo"><span         class="logo-web">Web</span><span          class="footer-logo">Studio</span></a>
         
-            <address class="location">г. Киев, пр-т Леси Украинки, 26 <br> 
-            
-                <a href="mailto:info@devstudio.com" class="contact">info@devstudio.com</a> <br>
-                    <a href="tel:+380961111111" class="contact">+38 096 111 11 11</a>
-                </address>         
+                <address class="location">г. Киев, пр-т Леси Украинки, 26         <br> 
+        
+                <a href="mailto:info@devstudio.com"         class="contact">info@devstudio.com</a> <br>
+                <a href="tel:+380961111111" class="contact">+38 096 111 11 11</a>
+            </address> 
+        </div>       
+<!--conteiner-->                          
     </footer>
     
 </body>
