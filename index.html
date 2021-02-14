@@ -21,7 +21,7 @@
             <a href="./index.html" class="logo"><span class="logo-web">Web</span>Studio</a>
             <!-- menu navigation -->
             <ul class="site-nav list">
-                <li> <a href="#" class="link current">Студия</a></li>
+                <li> <a href="./index.html" class="link current">Студия</a></li>
                 <li> <a href="./portfolio.html" class="link">Портфолио</a></li>
                 <li> <a href="#" class="link">Контакты</a></li>
             </ul>
@@ -43,7 +43,7 @@
 <!--conteiner 2-->
             <div class="container">
                 <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-                <a href="#" class="button">Заказать услугу</a>
+                <a href="#" class="button link">Заказать услугу</a>
             </div>
         </section> 
 <!--conteiner--> 
@@ -61,14 +61,17 @@
                     <li> <h3 class="title">Современные технологии</h3>
                             <p class="text">Значимость этих проблем настолько очевидна, что реализация плановых заданий.</p> </li>
                 </ul>       
-        <!--what are we do-->  
+        <!--what are we do--> 
+                <div class="what-we-do">
                 <h2 class="section-title">Чем мы занимаемся</h2>  
                     <ul class="we-do-list list">
-                        <li> <img src="./images/img.jpg" alt="hands typing code" height="294" width="370"/> 
+                        <li class="pic"> <img src="./images/img.jpg" alt="hands typing code" height="294" width="370"/> 
                         </li>
-                        <li> <img src="./images/img_1.jpg" alt= "hands hold phone and laptop is on" height="294" width="370"/> </li>
-                        <li> <img src="./images/img_2.jpg" alt= "hends hold tablet and pen" height="294" width="370"/> </li>
+                        <li class="pic"> <img src="./images/img_1.jpg" alt= "hands hold phone and laptop is on" height="294" width="370"/> </li>
+                        <li class="pic"> <img src="./images/img_2.jpg" alt= "hends hold tablet and pen" height="294" width="370"/> </li>
                     </ul>  
+                </div> 
+                
             </div>        
 <!--conteiner-->            
         </section>
@@ -79,17 +82,41 @@
                 <h2 class="section-title">Наша команда</h2>
             <ul class="team-list list">
                 
-                <li><img src="./images/img_man_broun_tshirt.jpg" alt="the smiling man with glasses on his face" width="270" height="260" />
-                <h3 class="title">Игорь Демьяненко</h3> <p>Product Designer</p>  </li>
+                <li>
+                    <div class="cart-team">   
+                        <img class="cart-img" src="./images/img_man_broun_tshirt.jpg" alt="the smiling man with glasses on his face" width="270" height="260" />
+                        <div class="cart-content"> 
+                            <h3 class="title">Игорь Демьяненко</h3> <p>Product Designer</p> 
+                        </div> 
+                    </div>  
+                </li> 
                 
-                <li><img src="./images/img_woma.jpg" alt="the smiling woman with glasses on her face" width="270" height="260" /> 
-                <h3 class="title">Ольга Репина</h3> <p>Frontend Developer</p>  </li>
+                <li>
+                    <div class="cart-team">
+                        <img class="cart-img" src="./images/img_woma.jpg" alt="the smiling woman with glasses on her face" width="270" height="260" /> 
+                        <div class="cart-content"> 
+                            <h3 class="title">Ольга Репина</h3> <p>Frontend Developer</p> 
+                        </div> 
+                    </div> 
+                </li>
                 
-                <li><img src="./images/img_man_blue_shirt.jpg" alt="the smiling man wearing in a blue shirt" width="270" height="260" />
-                <h3 class="title">Николай Тарасов</h3> <p>Marketing</p> </li>
+                <li>
+                    <div class="cart-team">
+                        <img class="cart-img" src="./images/img_man_blue_shirt.jpg" alt="the smiling man wearing in a blue shirt" width="270" height="260" />
+                        <div class="cart-content"> 
+                        <h3 class="title">Николай Тарасов</h3> <p>Marketing</p> 
+                        </div> 
+                    </div> 
+                </li>
                 
-                <li> <img src="./images/img_man_black_tsirt.jpg" alt="the smiling man with glasses wearing a black t-shirt" width="270" height="260"/>                 
-                <h3 class="title">Михаил Ермаков</h3> <p>UI Designer</p>  </li>
+                <li>
+                    <div class="cart-team">
+                        <img class="cart-img" src="./images/img_man_black_tsirt.jpg" alt="the smiling man with glasses wearing a black t-shirt" width="270" height="260"/>  
+                        <div class="cart-content">                
+                        <h3 class="title">Михаил Ермаков</h3> <p>UI Designer</p>  
+                        </div> 
+                    </div> 
+                </li>
             </ul>
             </div>
 <!--conteiner-->            
@@ -98,13 +125,15 @@
     <footer class="footer">
 <!--conteiner 5--> 
         <div class="container">
-                <a href="./index.html" class="logo"><span         class="logo-web">Web</span><span          class="footer-logo">Studio</span></a>
+                <div class="loogoforoter">
+                    <div class="footlink"><a  href="./index.html" class="logo">
+                    <span class="logo-web">Web</span> <span class="footer-logo">Studio</span> </a></div> 
+                    <address class="location">г. Киев, пр-т Леси Украинки, 26<br> 
         
-                <address class="location">г. Киев, пр-т Леси Украинки, 26         <br> 
-        
-                <a href="mailto:info@devstudio.com"         class="contact">info@devstudio.com</a> <br>
-                <a href="tel:+380961111111" class="contact">+38 096 111 11 11</a>
-            </address> 
+                    <a href="mailto:info@devstudio.com"         class="contact">info@devstudio.com</a> <br>
+                    <a href="tel:+380961111111" class="contact">+38 096 111 11 11</a>
+                </address> 
+                </div> 
         </div>       
 <!--conteiner-->                          
     </footer>
