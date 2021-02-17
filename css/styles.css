@@ -342,12 +342,14 @@ header {
 }
 
 .loogofooter .contact { 
+  display: block;
   color: rgba(255, 255, 255, 0.6); 
   font-weight: var(--font-text);   
   font-size: 14px; line-height: 1.71;
 }
 
-.loogofooter .contact.mail, { 
+.mail { 
+  display: inline-block;
   margin-bottom: 9px;
   margin-top: 9px;
 }
