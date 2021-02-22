@@ -10,12 +10,10 @@
   }
 
 /*OБЩИЕ СТИЛИ*/
-body {  border: 1px solid #AFB1B8 ;
-  background-color: var(--primare-bg-color);
+body { 
   color: var(--primary-text-color); 
   font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
-  max-width: 1600px; margin: 0 auto;
 }
 
 a { text-decoration: none;
@@ -402,9 +400,6 @@ header {
   fill: currentColor;
 }
 
-.networks-icon {
-  fill: #AFB1B8;
-}
 
 .socnetw {
   display: flex; 
@@ -414,26 +409,22 @@ header {
   border-radius: 50%;
   width: 44px;
   height: 44px;
+  cursor: pointer;
+  color: #AFB1B8;
+  fill: currentColor;
+  }
  
-
-}
 
 .socnetw:hover,
 .socnetw:focus {
+  fill: #fff;
   background-color: var(--accent-color);
 }
 
 .socnetw:active {
-  fill: transparent;
-}
-
-.networks-icon:hover,
-.networks-icon:focus { 
   fill: #fff;
- 
-  
 } 
-
+  
 .networks-icon:active {
   fill: #fff;
 }
@@ -489,27 +480,16 @@ header {
   padding-bottom: 25px;
   width: 170px;
   height: 90px;
+  color:#AFB1B8;
+  fill: currentColor;
 }
-
-
-.partniers-icon { 
-  fill: #AFB1B8;
-} 
 
 .partniers-link:hover,
 .partniers-link:focus { border: 1px solid var(--accent-color) ; box-shadow: 0px 4px 4px var(--accent-color) ;
+  color: var(--accent-color)  
 } 
 
 .partniers-link:active {
-  fill: transparent;
-}
-
-.partniers-icon:hover,
-.partniers-icon:focus { 
-  fill: var(--accent-color) 
-} 
-
-.partniers-icon:active {
   fill: transparent;
 }
 
@@ -579,14 +559,18 @@ header {
   margin-top: 20px;
   margin-bottom: 0px;
   fill: currentColor;
+  color: #ffffff;
 }
 
 .footernetworks .socnetw {
   background: rgba(255, 255, 255, 0.1);
 }
 
+.footernetworks .socnetw .networks-icon {
+ fill: #FFFFFF;}
+
 .footernetworks .socnetw:hover,
-.footernetworks.socnetw:focus {
+.footernetworks .socnetw:focus {
   background-color: var(--accent-color);
 }
 
@@ -656,10 +640,12 @@ header {
 
 .button-list .title:hover,
 .button-list .title:focus  { 
+  color: #fff;
   background-color: var(--accent-color); 
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12); 
-
 }
+
+
 
 .button-list .title:active { 
   background-color: transparent; 
