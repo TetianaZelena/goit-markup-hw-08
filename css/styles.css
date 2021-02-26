@@ -7,7 +7,10 @@
   --primary-text-color: #757575; 
   --title-text-color: #212121;
   --whate-laetters: #fff;  
-  }
+  --paddingbottom-header-elements: 30px;
+  --cubic-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-time: 250ms; 
+}
 
 /*OБЩИЕ СТИЛИ*/
 body { 
@@ -46,7 +49,8 @@ header {
   position: relative; 
   border-bottom: 1px solid #ECECEC; 
   padding-top: 30px; 
-  padding-bottom: 25px;
+  padding-bottom: 30px;
+
   }
 
 
@@ -64,6 +68,9 @@ header {
   font-size: 26px; 
   line-height: 1.19;  
   margin-right: 95px;
+  transition: color var(--duration-time) var(--cubic-function);
+  
+
 }
 
 .logo:hover, 
@@ -71,6 +78,8 @@ header {
 .footer-logo:hover, 
 .footer-logo:focus {
   color: var(--accent-color);
+  transition: color var(--duration-time) var(--cubic-function);
+  
 } 
 
 .logo:active,
@@ -102,11 +111,17 @@ header {
 /*menu navigation*/
 
 .site-nav .link { 
+  display: inline-block;
   color: #212121; 
   letter-spacing: 0.02em;
   font-weight: 500; 
   font-size: 14px; 
   line-height: 1.14;
+  /* padding-bottom: 30px; */
+
+  position: relative;
+
+
 }
 
 .nav-menu { 
@@ -114,17 +129,40 @@ header {
 }
 
 .site-nav li:not(:last-child) {
-  margin-right: 50px; 
+  padding-right: 50px; 
 }
 
 .site-nav .link:hover,
 .site-nav .link:focus { 
-  color: var(--accent-color)
+  color: var(--accent-color);
+  transition: color var(--duration-time) var(--cubic-function);
 } 
 
 .site-nav .link.current.link:active {
-  fill: transparent;
-}
+  fill: transparent}
+
+.site-nav .link.current::after {
+content: '';
+display: block;
+width: 100%;
+height: 5px;
+background: var(--accent-color);
+border-radius: 2px;
+
+position: absolute;
+left: 0;
+bottom: -38px;
+opacity: 0;
+transition: transform 250ms var(--cubic-function), opacity 250ms var(--cubic-function);
+transform: scaleX(0);
+} 
+
+.site-nav .link:hover::after,
+.site-nav .link:focus::after {
+  opacity: 1;
+  transform: scalex(1);}
+
+
 
 
 /*contact*/
@@ -148,26 +186,33 @@ header {
 
 .contact-list .link:hover,
 .contact-list .link:focus { 
-  color: var(--accent-color)
+  color: var(--accent-color);
+  transition: color var(--duration-time) var(--cubic-function);
+  
 }
 
 .contact-list .link:active {
-  fill: transparent;
+  fill: transparent; 
   }
 
 .contact-list .link::before { 
   content: " ";
-  fill: currentColor;
+  fill: currentColor; 
 } 
  
 .contact-icon {
   fill: currentColor;
   margin-right: 10px;
+  transform: perspective(10px)  ;
   }
 
 .contact-icon:hover,
 .contact-icon:focus { 
-  fill: var(--accent-color) } 
+  fill: var(--accent-color); 
+  transition: color var(--duration-time) var(--cubic-function);
+  
+  
+} 
 
 .contact-icon:active {
   fill: transparent;
@@ -203,7 +248,7 @@ header {
   }
 
 
-.button.link  {   
+.button-hero  {   
   width: 200px; 
   height: 50px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);  
@@ -217,14 +262,64 @@ header {
   line-height: 1.87px  
 }
 
-.button.link:hover,
-.button.link:focus { background-color: var(--accent-color);
+.button-hero:hover,
+.button-hero:focus { background-color: var(--accent-color);
 }
 
-.button.link:active {
+.button-hero:active {
   background-color: transparent;
 }
 
+.backdroup { position: fixed;
+  width: 100%;
+  height: 100%; 
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+}
+
+.modal { 
+  display: flex;
+  justify-content: flex-end;
+  
+  width: 528px;
+  height: 581px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  background-color: #fff;
+  padding-right: 30px;
+  padding-top: 21px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: scale(1) translate(-50%, -50%); 
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+ 
+.backdroup.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdroup.is-hidden .modal {
+  transform: scale (1.1) translate(-50%, -50%);
+} 
+
+.close-icon { 
+  top: 8px;
+  right: 13px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 30px;
+  height: 29px;
+  padding-top: -15px ;
+  padding-right: -17px;
+  position: absolute;
+  }
 
 .hero-title { 
   color: var(--whate-laetters); 
