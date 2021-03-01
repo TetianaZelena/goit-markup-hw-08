@@ -145,13 +145,14 @@ header {
 .site-nav .link:hover,
 .site-nav .link:focus { 
   color: var(--accent-color);
-  transition: color var(--duration-time) var(--cubic-function);
+  transition: transform 250ms var(--cubic-function), opacity 250ms var(--cubic-function);
 } 
 
 .site-nav .link.current.link:active {
-  fill: transparent}
+  fill: transparent;
+}
 
-.site-nav .link.current::after {
+.site-nav .link::after {
   content: '';
   display: block;
   width: 100%;
@@ -164,15 +165,22 @@ header {
   opacity: 0;
   transition: transform 250ms var(--cubic-function), opacity 250ms var(--cubic-function);
   transform: scaleX(0);
+  
+}
+
+
+.site-nav .link.current::after {
+  opacity: 1;
+  transition: transform 250ms var(--cubic-function), opacity 250ms var(--cubic-function);
+  transform: scaleX(1);
 } 
 
 .site-nav .link:hover::after,
 .site-nav .link:focus::after {
   opacity: 1;
-  transform: scalex(1);}
-
-
-
+  transform: scalex(1);
+  
+}
 
 /*contact*/
 .contact-list li:last-child { 
@@ -198,7 +206,6 @@ header {
 .contact-list .link:hover,
 .contact-list .link:focus { 
   color: var(--accent-color);
- 
   
 }
 
@@ -435,30 +442,32 @@ header {
   flex-basis: calc( 100% / 3 - 30px );
 }
 
-.thumb { display: block;
+.thumb {
   position: relative;
   overflow: hidden;
-  padding: 0;
+  padding: 0px;
+  width: 370px;
+
 }
 
-.thumb .by-line { 
+.thumb .title-by-line { display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   position: absolute;
+  overflow: hidden;
   font-weight: var(--font-weight-title); 
   font-size: 14px; 
-  line-height: 1.14px; 
+  line-height: 1.17px; 
   text-transform: uppercase;
   color: var(--whate-laetters);
-  text-align: center;
   bottom: 0;
-  left: 0;
+  left: 0px;
   width: 100%;
   height: 70px;
-  margin: 0;
-  padding: 27px 0px;
+  padding: 27px 0;
   background: rgba(47, 48, 58, 0.8);
-  
 }
-
 
 /*our team*/
 .team { 
