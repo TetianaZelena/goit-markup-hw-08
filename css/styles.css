@@ -68,7 +68,7 @@ header {
 .logo { 
   color: #000; 
   font-family: Raleway, sans-serif; 
-  font-weight: 700;
+  font-weight: var(--font-weight-title);
   font-size: 26px; 
   line-height: 1.19;  
   margin-right: 95px;
@@ -260,7 +260,18 @@ header {
   padding-right: 270px; 
   padding-bottom: 200px;
   padding-top: 200px;
-  }
+}
+
+.hero-title { 
+  color: var(--whate-laetters); 
+  font-weight: 900; 
+  font-size: 44px; 
+  line-height: 1.36; 
+  text-transform: uppercase;
+  min-width: 696px; 
+  min-height: 120px; 
+  margin-bottom: 40px; 
+}
 
 
 .button-hero  {   
@@ -286,6 +297,7 @@ header {
   background-color: transparent;
 }
 
+/*модальное окно hero */
 .backdroup {
   position: fixed;
   width: 100%;
@@ -296,14 +308,9 @@ header {
   overflow: auto;
   opacity: 1;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  
-
 }
 
 .modal { 
-  display: flex;
-  justify-content: flex-end;
-  
   width: 528px;
   height: 581px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -342,16 +349,65 @@ header {
   position: absolute;
 }
 
-.hero-title { 
-  color: var(--whate-laetters); 
-  font-weight: 900; 
-  font-size: 44px; 
-  line-height: 1.36; 
-  text-transform: uppercase;
-  min-width: 696px; 
-  min-height: 120px; 
-  margin-bottom: 40px; 
+.modal-title {
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  color: var(--title-text-color);
+  font-weight: var(--font-weight-title);
 }
+
+.title-property-form{
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  font-weight: var(--font-text);
+  color: var(--primary-text-color);
+}
+
+.text-agree {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: var(--font-text);
+  color: var(--primary-text-color);
+}
+
+.agreement-link{
+  font-size: 14px;
+  line-height: 1.71;
+  font-weight: var(--font-text);
+  text-decoration-line: underline;
+  color: var(--accent-color);
+}
+
+.button-closem {
+  align-items: center;
+  text-align: center;
+  font-weight: var(--font-weight-title);
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: var(--whate-laetters);
+  background: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+.text-coments::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+  font-size: 12px;
+  line-height: 1.16;
+  font-weight: var(--font-text);
+  letter-spacing: 0.01em;
+}
+
+.form-modal{
+  display: flex;
+  flex-direction: column;
+ 
+}
+
+
 
 /*advantages*/ 
 .section-advantages{
@@ -647,6 +703,10 @@ header {
   margin-bottom: 20px;
 }
 
+.loogofooter .logo { 
+  margin-right: 0;
+}
+
 /*footer address*/
 .location { color: var(--whate-laetters); 
   font-style: normal; 
@@ -728,7 +788,91 @@ header {
 
 .loogofooter {
   margin-right: 70px;
+
 }
+
+/* footer-subscription */
+
+.form-footer{ 
+  display: flex;
+  justify-content: right ;
+  align-content: center;
+  text-align: center; 
+  margin-left: 93px; 
+  margin-right: auto;
+  padding-top: 12px;
+  
+}
+
+.user-email {
+  display: flex; 
+  align-items: flex-start;
+  justify-content: right ;
+  align-content: flex-start;
+  text-align: right;
+  flex-direction: column;
+  margin-right: 12px;
+}
+
+.form-lable-foot {
+  color: var(--whate-laetters);
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-weight: var(--font-weight-title);
+  margin-bottom: 20px;
+  text-align: end;
+}
+
+.input-footer {
+  width: 358px;
+  height: 50px;
+  background-color: var(--hero-foot-bg-color);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  padding-left: 16px;
+  padding-top: 15px ;
+  padding-bottom: 15px;
+
+}
+
+.input-footer::placeholder{
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: var(--font-text);
+}
+
+.button-fotter-form {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 200px;
+  height: 50px;
+  color: var(--whate-laetters);  
+  border: none;
+  font-weight: var(--font-weight-title);
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  background: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  margin-top: 43px;
+  padding-left: 29px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.submitf-icon {
+  width: 24px ;
+  height: 24px;
+  margin-right: 10px;
+}
+
 
 /* portfolio */
 .portfolio {
