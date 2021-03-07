@@ -81,6 +81,10 @@ header {
   transition: color var(--duration-time) var(--cubic-function);
 }
 
+.loogofooter{
+  width: auto;
+}
+
 .logo:hover, 
 .logo:focus,
 .footer-logo:hover, 
@@ -359,6 +363,12 @@ button.close-icon:focus-within{
   fill: var(--accent-color);
 }
 
+.form-close-icon{
+  display: flex;
+  align-items:center;
+  margin: auto;
+}
+
 
 .modal-title { 
   font-size: 20px;
@@ -546,7 +556,7 @@ textarea.text-coments:focus-within{
   background-size: contain;
   border-color: var(--accent-color);;
   background-origin: border-box; 
-  background-image: url(../images/Vector2n.svg) no-repeat; 
+  background-image: url(../images/Vector2n.svg); 
   background-position: 50% 50%;
 }
  
@@ -872,7 +882,7 @@ textarea.text-coments:focus-within{
   font-weight: var(--font-text);
   font-size: 14px; 
   line-height: 1.71;
-  max-width: 231px;
+  min-width: 231px;
   
 }
 
