@@ -56,45 +56,36 @@
             <div class="modal">
                             
                 <h3 class="modal-title">Оставьте свои данные, мы вам перезвоним</h3>
-                           
                     <form class="form-modal" autocomplete="on">
-                                        
-                                         
-                        <label for="user_name" class="modal-userdate">
-                            <span class="title-property-form">Имя</span> 
+                        <div class="modal-userdate">
+                            <label for="name" class="title-property-form" >Имя</label>
                             <div class="element-form" >
-                                <input type="user-name" class="user-label" placeholder=" ">
-                                <svg class="form-icon" width="20" height="20">
-                                <use href="./icons.svg#icon-Vector1n"></use>
-                                </svg></div>
-                        </label>  
-                                        
-                            
-                        <label for="user_phone" class="modal-userdate">
-                            <span class="title-property-form">Телефон</span>
+                            <input type="text" class="user-label" name="name" id="name" placeholder=" ">
+                            <svg class="form-icon" width="20" height="20">
+                            <use href="./icons.svg#icon-Vector1n"></use>
+                            </svg></div>
+                        </div>
+                        
+                        <div class="modal-userdate">
+                            <label for="user-phone" class="title-property-form">Телефон </label>
                             <div class="element-form" > 
-                                <input type="user-phone" class="user-label" placeholder=" ">  
-                                <svg class="form-icon" width="20" height="20">
-                                <use href="./icons.svg#icon-phone-black-18dp1n"></use>
-                                </svg></div>
-                        </label>  
-                                    
-                        <label for="user_email" class="modal-userdate">
-                            <span class="title-property-form">Почта</span>
+                            <input type="number" class="user-label" name="user-phone" id="user-phone" placeholder=" ">  
+                            <svg class="form-icon" width="20" height="20">
+                            <use href="./icons.svg#icon-phone-black-18dp1n"></use>
+                            </svg></div>
+                        </div>
+                        <div class="modal-userdate">
+                            <label for="user-email" class="title-property-form">Почта</label>
                             <div class="element-form" >
-                                <input type="user-email" class="user-label" placeholder=" ">   
-                                <svg class="form-icon" width="20" height="20">
-                                <use href="./icons.svg#icon-Vecmail"></use>
-                                </svg></div>
-                        </label>  
-                                        
-                        <label for="coments" class="area-coments"> 
-                            <span class="title-property-form">Комментарий</span>
+                            <input type="email" class="user-label" name="user-email" id="user-email" placeholder=" ">   
+                            <svg class="form-icon" width="20" height="20">
+                            <use href="./icons.svg#icon-Vecmail"></use>
+                            </svg></div>
+                        </div>          
+                        <label class="area-coments"> 
+                                <span class="title-property-form">Комментарий</span>
                                 <textarea name="coments"  placeholder="Введите текст" class="text-coments"></textarea>
-                            </label> 
-                                       
-                                    
-                                        
+                        </label> 
                         <label for="policity" class="police-label" >
                                 <input type="checkbox" name="policity" id="policity" class="checkbox"> 
                                 <span class="checkbox-icon" ></span>
@@ -181,94 +172,95 @@
         <!--Our team -->
         <section class="section team">
 <!--conteiner 5-->             
-            <div class="container">
-                <h2 class="section-title">Наша команда</h2>
-            <ul class="team-list list">
-                    <div class="cart-team">   
-                        <img class="cart-img" src="./images/img_man_broun_tshirt.jpg" alt="the smiling man with glasses on his face" width="270" height="260" />
-                        <div class="cart-content"> 
-                            <h3 class="title">Игорь Демьяненко</h3> <p>Product Designer</p> 
+<div class="container">
+    <h2 class="section-title">Наша команда</h2>
+        <ul class="team-list list">
+            <li class="cart-team">   
+                <img class="cart-img" src="./images/img_man_broun_tshirt.jpg" alt="the smiling man with glasses on his face" width="270" height="260" />
+                    <div class="cart-content"> 
+                        <h3 class="title">Игорь Демьяненко</h3> <p>Product Designer</p> 
                             <ul class="socialnetworks list">
                                 <li> <a href="#" class="socnetw" aria-label="instagram"> <svg class="networks-icon" width="20" height="20">
-                                    <use href="./images/symbol-defs.svg#icon-instagram-2"></use>
-                                    </svg> </a> </li>
-                            <li> <a href="#"  class="socnetw" aria-label="twitter"> <svg class="networks-icon" width="20" height="20">
+                                <use href="./images/symbol-defs.svg#icon-instagram-2"></use>
+                                </svg> </a> </li>
+                                <li> <a href="#"  class="socnetw" aria-label="twitter"> <svg class="networks-icon" width="20" height="20">
                                 <use href="./images/symbol-defs.svg#icon-twitter-1"></use>
                                 </svg></a></li>
-                            <li> <a href="#"  class="socnetw" aria-label="facebook"> <svg class="networks-icon" width="20" height="20">
+                                <li> <a href="#"  class="socnetw" aria-label="facebook"> <svg class="networks-icon" width="20" height="20">
                                 <use href="./images/symbol-defs.svg#icon-facebook-1"></use>
                                 </svg></a></li>
-                            <li> <a href="#" class="socnetw" aria-label="linkedin"> <svg class="networks-icon" width="20" height="20">
+                                <li> <a href="#" class="socnetw" aria-label="linkedin"> <svg class="networks-icon" width="20" height="20">
                                 <use href="./images/symbol-defs.svg#icon-linkedin-1"></use>
-                                </svg></a> </li></ul>
-                        </div> 
-                    </div>  
+                                </svg></a> </li>
+                            </ul>
             
-                    <div class="cart-team">
-                        <img class="cart-img" src="./images/img_woma.jpg" alt="the smiling woman with glasses on her face" width="270" height="260" /> 
-                        <div class="cart-content"> 
-                            <h3 class="title">Ольга Репина</h3> <p>Frontend Developer</p> 
+                    </div> 
+            </li>  
+            
+            <li class="cart-team">
+                <img class="cart-img" src="./images/img_woma.jpg" alt="the smiling woman with glasses on her face" width="270" height="260" /> 
+                    <div class="cart-content"> 
+                        <h3 class="title">Ольга Репина</h3> <p>Frontend Developer</p> 
                             <ul class="socialnetworks list">
                                 <li> <a href= "#" class="socnetw" aria-label="instagram"> <svg class="networks-icon" width="20" height="20">
-                                    <use href="./images/symbol-defs.svg#icon-instagram-2"></use>
-                                    </svg> </a> </li>
-                                    <li> <a href="#" class="socnetw" aria-label="twitter"> <svg class="networks-icon" width="20" height="20">
-                                        <use href="./images/symbol-defs.svg#icon-twitter-1"></use>
-                                        </svg> </a></li>
-                            <li> <a href= "#" class="socnetw" aria-label="facebook"> <svg class="networks-icon" width="20" height="20">
+                                <use href="./images/symbol-defs.svg#icon-instagram-2"></use>
+                                </svg> </a> </li>
+                                <li> <a href="#" class="socnetw" aria-label="twitter"> <svg class="networks-icon" width="20" height="20">
+                                <use href="./images/symbol-defs.svg#icon-twitter-1"></use>
+                                </svg> </a></li>
+                                <li> <a href= "#" class="socnetw" aria-label="facebook"> <svg class="networks-icon" width="20" height="20">
                                 <use href="./images/symbol-defs.svg#icon-facebook-1"></use>
                                 </svg></a> </li>
-                            <li> <a href= "#" class="socnetw" aria-label="linkedin"> <svg class="networks-icon" width="20" height="20">
+                                <li> <a href= "#" class="socnetw" aria-label="linkedin"> <svg class="networks-icon" width="20" height="20">
                                 <use href="./images/symbol-defs.svg#icon-linkedin-1"></use>
                                 </svg> </a> </li>
                             </ul>
-                        </div> 
                     </div> 
+            </li> 
             
-                    <div class="cart-team">
-                        <img class="cart-img" src="./images/img_man_blue_shirt.jpg" alt="the smiling man wearing in a blue shirt" width="270" height="260" />
-                        <div class="cart-content"> 
+            <li class="cart-team">
+                <img class="cart-img" src="./images/img_man_blue_shirt.jpg" alt="the smiling man wearing in a blue shirt" width="270" height="260" />
+                    <div class="cart-content"> 
                         <h3 class="title">Николай Тарасов</h3> <p>Marketing</p> 
-                        <ul class="socialnetworks list">
-                            <li><a href= "#" class="socnetw" aria-label="instagram"> <svg class="networks-icon" width="20" height="20">
+                            <ul class="socialnetworks list">
+                                <li><a href= "#" class="socnetw" aria-label="instagram"> <svg class="networks-icon" width="20" height="20">
                                 <use href="./images/symbol-defs.svg#icon-instagram-2"></use>
                                 </svg> </a> </li>
                                 <li> <a href= "#" class="socnetw" aria-label="twitter"> <svg class="networks-icon" width="20" height="20">
-                                    <use href="./images/symbol-defs.svg#icon-twitter-1"></use>
-                                    </svg> </a></li>
-                        <li> <a href= "#" class="socnetw" aria-label="facebook"> <svg class="networks-icon" width="20" height="20">
-                            <use href="./images/symbol-defs.svg#icon-facebook-1"></use>
-                            </svg> </a></li>
-                        <li> <a href= "#" class="socnetw" aria-label="linkedin"> <svg class="networks-icon" width="20" height="20">
-                            <use href="./images/symbol-defs.svg#icon-linkedin-1"></use>
-                            </svg> </a> </li>
-                        </ul>
-                        </div> 
+                                <use href="./images/symbol-defs.svg#icon-twitter-1"></use>
+                                </svg> </a></li>
+                                <li> <a href= "#" class="socnetw" aria-label="facebook"> <svg class="networks-icon" width="20" height="20">
+                                <use href="./images/symbol-defs.svg#icon-facebook-1"></use>
+                                </svg> </a></li>
+                                <li> <a href= "#" class="socnetw" aria-label="linkedin"> <svg class="networks-icon" width="20" height="20">
+                                <use href="./images/symbol-defs.svg#icon-linkedin-1"></use>
+                                </svg> </a> </li>
+                            </ul>
                     </div> 
+            </li> 
             
-                    <div class="cart-team">
-                        <img class="cart-img" src="./images/img_man_black_tsirt.jpg" alt="the smiling man with glasses wearing a black t-shirt" width="270" height="260"/>  
-                        <div class="cart-content">                
+            <li class="cart-team">
+                <img class="cart-img" src="./images/img_man_black_tsirt.jpg" alt="the smiling man with glasses wearing a black t-shirt" width="270" height="260"/>  
+                    <div class="cart-content">                
                         <h3 class="title">Михаил Ермаков</h3> <p>UI Designer</p> 
-                        <ul class="socialnetworks list">
-                            <li> <a href= "#" class="socnetw" aria-label="instagram"> <svg class="networks-icon" width="20" height="20">
+                            <ul class="socialnetworks list">
+                                <li> <a href= "#" class="socnetw" aria-label="instagram"> <svg class="networks-icon" width="20" height="20">
                                 <use href="./images/symbol-defs.svg#icon-instagram-2"></use>
                                 </svg> </a></li>
-                        <li> <a href= "#" class="socnetw" aria-label="twitter"> <svg class="networks-icon" width="20" height="20">
-                            <use href="./images/symbol-defs.svg#icon-twitter-1"></use>
-                            </svg></a></li>
-                        <li> <a href= "#" class="socnetw" aria-label="facebook"> <svg class="networks-icon" width="20" height="20">
-                            <use href="./images/symbol-defs.svg#icon-facebook-1"></use>
-                            </svg></a></li>
-                        <li> <a href= "#" class="socnetw" aria-label="linkedin"> <svg class="networks-icon" width="20" height="20">
-                            <use href="./images/symbol-defs.svg#icon-linkedin-1"></use>
-                            </svg> </a></li>
-                        </ul> 
-                        </div> 
+                                <li> <a href= "#" class="socnetw" aria-label="twitter"> <svg class="networks-icon" width="20" height="20">
+                                <use href="./images/symbol-defs.svg#icon-twitter-1"></use>
+                                </svg></a></li>
+                                <li> <a href= "#" class="socnetw" aria-label="facebook"> <svg class="networks-icon" width="20" height="20">
+                                <use href="./images/symbol-defs.svg#icon-facebook-1"></use>
+                                </svg></a></li>
+                                <li> <a href= "#" class="socnetw" aria-label="linkedin"> <svg class="networks-icon" width="20" height="20">
+                                <use href="./images/symbol-defs.svg#icon-linkedin-1"></use>
+                                </svg> </a></li>
+                            </ul> 
                     </div> 
-                
-            </ul>
-            </div>
+            </li> 
+        </ul>
+</div>
 <!--conteiner-->            
         </section>
         <section class="section partneirs"> 
@@ -334,7 +326,7 @@
                         </svg> </a> </li> </ul>
                 </div>
             <form class="form-footer" autocomplete="on">
-                <label  for="user_email" class="user-email">
+                <label class="user-email">
                         <span class="form-lable-foot">Подпишитесь на рассылку</span> 
                         <input type="email" name="user_email" class ="input-footer" placeholder="E-mail">
                     </label>
