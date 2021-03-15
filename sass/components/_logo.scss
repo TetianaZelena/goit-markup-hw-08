@@ -1,0 +1,42 @@
+
+.footer__logo, 
+.header__logo { 
+  color: #000; 
+  font-family: Raleway, sans-serif; 
+  font-weight: var(--font-weight-title);
+  font-size: 26px; 
+  line-height: 1.19;
+  width: 145px;  
+  margin-right: 95px;
+  @extend %transitionColor;
+  padding-bottom: 30px;
+}
+  
+.footer__logo--studio{
+  @extend %transitionColor;
+}
+
+.footer__logo--web {
+ 
+}
+
+.footer__logo--web,
+.header__logo--web, 
+.header__logo:hover, 
+.header__logo:focus,
+.footer__logo--studio:hover, 
+.footer__logo--studio:focus {
+  color: var(--accent-color);  
+} 
+  
+.header__logo:active,
+.footer__logo--studio:active {
+  fill: transparent;
+}
+
+.footer__logo{ 
+  color: var(--whate-laetters);  
+}
+
+
+  

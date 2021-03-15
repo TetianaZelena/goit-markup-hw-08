@@ -1,0 +1,107 @@
+.advantages{
+  padding-top: 94px; 
+  padding-bottom: 94px;
+}
+
+.advantages__container{
+  @include conTainer;
+} 
+ 
+.advantages__icon {
+  @include Flex();
+  text-align: center; 
+  margin-bottom: 30px;
+}
+  
+.advantages__icon--item { 
+  box-sizing: border-box;
+  width: 270px;
+  height: 120px;
+  background-color: #F5F4FA;
+  border-radius: 4px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  
+  & :not(:last-child) {
+    margin-right: 30px; 
+  }
+}
+
+.advantages__info { 
+  @include Flex (flex, flex-start, space-between);
+} 
+
+.advantages__info--title { 
+  @include Flex (flex, flex-start, space-between);
+  color: var(--title-text-color);
+  font-weight: var(--font-weight-title); 
+  font-size: 14px; 
+  line-height: 1.14px;  
+  text-transform: uppercase;
+  text-align: center; 
+  width: 270px;
+  margin-bottom: 10px;
+}
+
+.advantages__info--text { 
+  @include Flex (flex, flex-start, space-between);
+  font-weight: var(--font-text); 
+  font-size: 14px; 
+  line-height: 1.71; 
+  width: 270px;
+} 
+
+/* what-we-do */
+.-section__direction {
+  padding-bottom: 94px;  
+}
+
+.direction__container{
+  @include conTainer;
+} 
+  
+.direction__title { 
+  color: var(--title-text-color); 
+  font-weight: var(--font-weight-title); 
+  font-size: 36px; 
+  line-height: 1.16; 
+  min-width: min-content;  
+  padding-left: 395px; 
+  padding-right: 395px;
+  margin-bottom: 50px;   
+}
+  
+.direction__list { 
+  @include Flex;
+  padding: 0px; 
+  flex-basis: calc( 100% / 3 - 30px );
+    
+  &:not(:last-child) {
+    margin-right: 30px; 
+  }
+}
+  
+.direction__thumb {
+  position: relative;
+  overflow: hidden;
+  padding: 0px;
+  width: 370px;
+  }
+
+.direction__thumb--title{
+  @include Flex(flex, center, center);
+  text-align: center;
+  position: absolute;
+  left: 0px;
+  overflow: hidden;
+  font-weight: var(--font-weight-title); 
+  font-size: 14px; 
+  line-height: 1.17px; 
+  text-transform: uppercase;
+  color: var(--whate-laetters);
+  width: 100%;
+  height: 70px;
+  background: rgba(47, 48, 58, 0.8);
+  bottom: 0;
+  padding: 27px 0;
+}

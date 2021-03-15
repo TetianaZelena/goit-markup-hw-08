@@ -1,0 +1,132 @@
+
+
+%paddingBot32Header{
+  padding-bottom: 32px;
+}
+
+%fontStyleHeader{
+  font-weight: 500; 
+  font-size: 14px; 
+  line-height: 1.14;
+}
+
+header {
+  position: relative; 
+  width: auto;
+  background-color: #fff; 
+  border-bottom: 1px solid #ECECEC; 
+  padding-top: 30px; 
+} 
+
+.header__navigation{
+  @include conTainer;
+  @include Flex;
+}
+
+.header__menu { 
+  @include Flex;
+  margin-right: auto;
+}
+
+.header__list{
+  @include Flex;
+  
+  & li:not(:last-child){padding-right: 50px;}  
+}
+
+.header__link{ 
+  @include Flex;
+  @include bodyFont ( var(--title-text-color), 0.02em);  
+  @extend %fontStyleHeader;
+  position: relative;
+  @extend %paddingBot32Header;
+  
+  &:hover,
+  &:focus {color: var(--accent-color);
+    @extend %transitionTransform ;}
+}
+
+.header__link--current {
+  color: var(--accent-color);
+  @extend %transitionTransform ;
+} 
+  
+
+
+.header__link::after {
+  @include positionAbsoluteAfter();
+  left: 0;
+  bottom: -7px;
+  width: 100%;
+  height: 5px;
+  background: var(--accent-color);
+  border-radius: 2px;
+  opacity: 0;
+  @extend %transitionTransform ;
+  transform: scaleX(0);
+}
+  
+  
+.header__link--current::after {
+  opacity: 1;
+  @extend %transitionTransform ;
+  transform: scaleX(1);
+  } 
+  
+.header__link:hover::after,
+.header__link:focus::after {
+  opacity: 1;
+  transform: scalex(1); 
+  }
+  
+/*contact*/
+
+.header__contact{ 
+  @include Flex;
+    
+  & li:last-child { 
+    margin-left: 50px; 
+  }
+} 
+
+.header__contact--link { 
+  @include Flex;
+  text-align: center; 
+  color: var(--primary-text-color); 
+  @extend %fontStyleHeader;
+  @extend %paddingBot32Header;
+  cursor: var(--cursor);
+  @extend %transitionColor;
+    
+  &:hover,
+  &:focus { 
+    color: var(--accent-color);
+  } 
+}
+
+.header__contact--link::before { 
+  content: " ";
+  fill: currentColor; 
+}  
+  
+.header__contact--icon{
+  fill: currentColor;
+  margin-right: 10px;
+  @extend %transitionFill;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  
+  &:hover,
+  &:focus { 
+    fill: var(--accent-color); 
+  } 
+  
+  &:active {
+    fill: transparent;
+  }
+}
+  
+
+  
+  
+  
