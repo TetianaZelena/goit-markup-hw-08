@@ -6,12 +6,6 @@
   font-size: 16px; 
   line-height: 1.87;
 }
-  
-@mixin conTainer () { 
-  max-width: 1200px; 
-  padding: 0 15px; 
-  margin: 0 auto; 
-}
 
 @mixin Flex ($display:flex, $align-items: center, $justify-content: space-between) 
   {

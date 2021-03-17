@@ -4,13 +4,12 @@
   padding-bottom: 60px;
 }
 
-.footer__container{
-  @include bodyFont ();
-  @include conTainer();
-}
-
 .footer__box {
   display: inline-flex;
+}
+
+.footer__logo{
+  padding-bottom: 30px;
 }
     
 .footer__link {

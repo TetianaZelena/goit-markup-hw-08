@@ -9,15 +9,10 @@
   width: 145px;  
   margin-right: 95px;
   @extend %transitionColor;
-  padding-bottom: 30px;
 }
   
 .footer__logo--studio{
   @extend %transitionColor;
-}
-
-.footer__logo--web {
- 
 }
 
 .footer__logo--web,

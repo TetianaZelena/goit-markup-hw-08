@@ -3,11 +3,6 @@
   padding-bottom: 94px; 
 }
 
-.partneirs__container {
-  @include conTainer;
-} 
-    
-
 .partneirs__title { 
   color: var(--title-text-color); 
   font-weight: var(--font-weight-title); 
@@ -20,7 +15,7 @@
 }
   
 .partniers__list {
-  @include Flex();
+  @include Flex(flex, center, none);
   flex-basis: calc( 100% / 6 - 30px );
   text-align: center;
   margin-left: auto;

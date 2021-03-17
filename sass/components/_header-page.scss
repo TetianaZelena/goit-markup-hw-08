@@ -2,6 +2,7 @@
 
 %paddingBot32Header{
   padding-bottom: 32px;
+  padding-top: 30px;
 }
 
 %fontStyleHeader{
@@ -15,28 +16,34 @@ header {
   width: auto;
   background-color: #fff; 
   border-bottom: 1px solid #ECECEC; 
-  padding-top: 30px; 
+
 } 
 
 .header__navigation{
-  @include conTainer;
   @include Flex;
 }
 
 .header__menu { 
   @include Flex;
-  margin-right: auto;
+
+}
+
+header__logo{
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .header__list{
   @include Flex;
+
   
-  & li:not(:last-child){padding-right: 50px;}  
+  & li:not(:last-child){margin-right: 50px;}  
 }
 
 .header__link{ 
   @include Flex;
-  @include bodyFont ( var(--title-text-color), 0.02em);  
+  color: var(--title-text-color);
+  letter-spacing: 0.02em;  
   @extend %fontStyleHeader;
   position: relative;
   @extend %paddingBot32Header;
@@ -56,7 +63,7 @@ header {
 .header__link::after {
   @include positionAbsoluteAfter();
   left: 0;
-  bottom: -7px;
+  bottom: -2px;
   width: 100%;
   height: 5px;
   background: var(--accent-color);

@@ -4,10 +4,6 @@
   background-color: var(--white-bg-color);
 }
 
-.portfolio__container{
-  @include conTainer;
-}
-
 /*portfolio скрытый h1*/
 .visually__hidden { 
   position: absolute; 
