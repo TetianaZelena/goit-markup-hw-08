@@ -28,7 +28,7 @@ header {
 
 }
 
-header__logo{
+.header__logo{
   padding-top: 30px;
   padding-bottom: 30px;
 }
@@ -89,7 +89,7 @@ header__logo{
 /*contact*/
 
 .header__contact{ 
-  @include Flex;
+  @include Flex (flex, center, none);
     
   & li:last-child { 
     margin-left: 50px; 

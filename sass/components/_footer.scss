@@ -4,8 +4,9 @@
   padding-bottom: 60px;
 }
 
-.footer__box {
+.footer__container {
   display: inline-flex;
+  align-items: baseline;
 }
 
 .footer__logo{
@@ -36,20 +37,17 @@
   color: rgba(255, 255, 255, 0.6); 
   font-weight: var(--font-text);   
   font-size: 14px; line-height: 1.71;
+  margin-top: 9px;
 }
   
 .footer__contact--mail { 
   display: inline-block;
-  margin-bottom: 9px;
   margin-top: 9px;
 }
   
 /* footer join */ 
 .footer__join { 
-  display: block;
-  width: 206px;
-  height: 80px;
-  padding-top: 12px; 
+ 
 }
   
   
@@ -109,7 +107,6 @@
   text-align: center; 
   margin-left: 93px; 
   margin-right: auto;
-  padding-top: 12px;
 }
 
 .footer__form--subscribe {

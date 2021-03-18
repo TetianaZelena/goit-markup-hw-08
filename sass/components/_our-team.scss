@@ -8,59 +8,52 @@
 .team__list  { 
   display: flex;
   flex-wrap: wrap;
-  flex-basis: calc( 100% / 3 - 30px ); 
-  color: var(--title-text-color);
+  color: var(--title-text-color); 
   
   & :not(:last-child){
     margin-right: 30px;
   }
-
 }
-  
-.team__title {
-  min-width: min-content;   
+ 
+.team__title {  
   color: var(--title-text-color); 
   font-weight: var(--font-weight-title); 
   font-size: 36px; 
   line-height: 1.16; 
   text-align: center; 
-  padding-left: 453px; 
-  padding-right: 453px; 
   margin-bottom: 50px; 
 }
   
 .team__cart {
   background-color: var(--white-bg-color);
-  min-width: 270px;
-  min-height: 368px;  
+  width: 270px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2); 
   border-radius: 0px 0px 4px 4px;
+  flex-basis: calc((100% - 3 * 30px) / 4);
+
 }
   
 .team__cart--content { 
   text-align: center;
-    
   border-radius: 0px 0px 4px 4px; 
   padding-top: 30px; 
   padding-bottom: 30px; 
-  margin-right: auto; 
-  margin-left: auto;
+  padding-left: 32px;
+  padding-right: 32px;
 }
   
-.team__cart--title {
-  min-width: 151px;  
-  margin-bottom: 10px;  
+.team__cart--title { 
+  margin-bottom: 10px;
 }
   
-.team__networks--list {
-  @include Flex();
+.team__networks {
+  @include Flex(flex, center, center);
   text-align: center;
-  width: 206px;
-  height: 44px;
-  margin-left: auto;
-  margin-right: auto;
   margin-top: 16px;
-  margin-bottom: 0px;
+  
+  & :not(:last-child){
+    margin-right: 10px;
+  }
 }
   
   

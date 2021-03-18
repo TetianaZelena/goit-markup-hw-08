@@ -6,8 +6,7 @@
 .advantages__list {
   @include Flex(flex, center, none);
   text-align: center; 
-  margin-bottom: 30px;
-  
+
   & :not(:last-child) {
     margin-right: 30px; 
   }
@@ -15,24 +14,17 @@
 
 .advantages__icon--item{
   width: 270px;
-  
 }
   
 .advantages__icon--svg { 
-  box-sizing: border-box;
+  @include Flex(flex, center, center);
   width: 270px;
   height: 120px;
   background-color: #F5F4FA;
   border-radius: 4px;
-  padding-top: 25px;
-  padding-bottom: 25px;
   margin-bottom: 30px;
-
 }
 
-.advantages__info { 
-  @include Flex (flex, flex-start, space-between);
-} 
 
 .advantages__info--title { 
   text-align: left;
@@ -52,25 +44,23 @@
 } 
 
 /* what-we-do */
-.-section__direction {
+.section__direction {
   padding-bottom: 94px;  
 }
   
 .direction__title { 
+  text-align: center;
   color: var(--title-text-color); 
   font-weight: var(--font-weight-title); 
   font-size: 36px; 
   line-height: 1.16; 
   min-width: min-content;  
-  padding-left: 395px; 
-  padding-right: 395px;
   margin-bottom: 50px;   
 }
   
 .direction__list { 
   @include Flex(flex, center, none);
   padding: 0px; 
-  flex-basis: calc( 100% / 3 - 30px );
     
   & :not(:last-child) {
     margin-right: 30px; 
@@ -82,7 +72,7 @@
   overflow: hidden;
   padding: 0px;
   width: 370px;
-  }
+}
 
 .direction__thumb--title{
   @include Flex(flex, center, center);
