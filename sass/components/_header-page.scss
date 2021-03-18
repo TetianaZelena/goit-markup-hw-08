@@ -63,7 +63,7 @@ header {
 .header__link::after {
   @include positionAbsoluteAfter();
   left: 0;
-  bottom: -2px;
+  bottom: -7px;
   width: 100%;
   height: 5px;
   background: var(--accent-color);
