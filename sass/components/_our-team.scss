@@ -6,10 +6,14 @@
 
   
 .team__list  { 
-  @include Flex();
+  display: flex;
   flex-wrap: wrap;
   flex-basis: calc( 100% / 3 - 30px ); 
   color: var(--title-text-color);
+  
+  & :not(:last-child){
+    margin-right: 30px;
+  }
 
 }
   
