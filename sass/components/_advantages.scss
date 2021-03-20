@@ -1,28 +1,59 @@
 .advantages{
-  padding-top: 94px; 
-  padding-bottom: 94px;
+  padding-top: 60px; 
+  padding-bottom: 60px;
+
+  @media  (min-width: 1200px){
+    padding-top: 94px; 
+    padding-bottom: 94px; 
+  } 
 }
 
 .advantages__list {
-  @include Flex(flex, center, none);
   text-align: center; 
-
   & :not(:last-child) {
-    margin-right: 30px; 
+    margin-bottom: 30px; 
   }
+
+  @media screen and (min-width: 768px) {
+    @include Flex(flex, center, none);
+    flex-wrap: wrap;
+    align-items: baseline;
+}
+  @media screen and (min-width: 1200px) {
+    @include Flex(flex, center, none);
+    }
 }
 
-.advantages__icon--item{
-  width: 270px;
-}
+.advantages__icon--item {
+  min-width: 320px;
+  @media screen and (min-width: 768px) {
+    @include Flex(flex, center, none);
+    flex-wrap: wrap;
+    flex-basis: calc((100% - 30px) / 2);
+    min-width: 354px;
+  }
+  
+  @media screen and (min-width: 1200px) {
+    min-width: 270px;
+    align-items: stretch;
+  }
+ }
   
 .advantages__icon--svg { 
   @include Flex(flex, center, center);
-  width: 270px;
+  min-width: 320px;
   height: 120px;
   background-color: #F5F4FA;
   border-radius: 4px;
-  margin-bottom: 30px;
+  flex-wrap: wrap;
+ 
+
+  @media screen and (min-width: 768px) {
+    min-width: 354px;
+  }
+ @media screen and (min-width: 1200px) {
+    width: 270px;
+ }
 }
 
 
@@ -45,6 +76,10 @@
 
 /* what-we-do */
 .section__direction {
+display: none;
+@media screen and (min-width: 1200px) {
+display: block;
+}
   padding-bottom: 94px;  
 }
   

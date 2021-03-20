@@ -1,6 +1,4 @@
-
-.footer__logo, 
-.header__logo { 
+.footer__logo { 
   color: #000; 
   font-family: Raleway, sans-serif; 
   font-weight: var(--font-weight-title);
@@ -10,6 +8,40 @@
   margin-right: 95px;
   @extend %transitionColor;
 }
+
+
+.header__logo{
+  color: #000; 
+  font-family: Raleway, sans-serif; 
+  font-weight: var(--font-weight-title);
+  font-size: 24px; 
+  line-height: 1.16;
+  max-width: 145px;  
+  @extend %transitionColor;
+  display: inline-block;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  @media  (min-width: 480px) {
+    padding-top: 26px;
+    padding-bottom: 26px;
+    margin-right: 88px;
+  }
+  @media  (min-width: 739px) {
+    font-size: 26px; 
+    line-height: 1.19;
+    padding-top: 26px;
+    padding-bottom: 26px;
+ 
+  }
+  @media  (min-width: 1170px) {
+    padding-top: 24px;
+    padding-bottom: 25px;
+    margin-right: 95px;
+  }
+}
+
+
   
 .footer__logo--studio{
   @extend %transitionColor;
@@ -34,4 +66,5 @@
 }
 
 
+  
   

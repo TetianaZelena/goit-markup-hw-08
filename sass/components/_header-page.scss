@@ -1,10 +1,4 @@
 
-
-%paddingBot32Header{
-  padding-bottom: 32px;
-  padding-top: 30px;
-}
-
 %fontStyleHeader{
   font-weight: 500; 
   font-size: 14px; 
@@ -13,40 +7,39 @@
 
 header {
   position: relative; 
-  width: auto;
   background-color: #fff; 
   border-bottom: 1px solid #ECECEC; 
-
 } 
 
 .header__navigation{
-  @include Flex;
-}
-
+  @include Flex;}
+ 
 .header__menu { 
-  @include Flex;
-
-}
-
-.header__logo{
-  padding-top: 30px;
-  padding-bottom: 30px;
+  @media  (min-width: 768px) {
+    display: flex;
+    text-align: center;
+  }
 }
 
 .header__list{
-  @include Flex;
+  display: none;
+  @media  (min-width: 768px) {
+    @include Flex;
 
-  
-  & li:not(:last-child){margin-right: 50px;}  
+    & li:not(:last-child){margin-right: 50px;
+    } 
+  }
 }
 
+  
 .header__link{ 
   @include Flex;
   color: var(--title-text-color);
   letter-spacing: 0.02em;  
   @extend %fontStyleHeader;
   position: relative;
-  @extend %paddingBot32Header;
+  padding-bottom: 32px;
+  padding-top: 30px;
   
   &:hover,
   &:focus {color: var(--accent-color);
@@ -58,12 +51,10 @@ header {
   @extend %transitionTransform ;
 } 
   
-
-
 .header__link::after {
   @include positionAbsoluteAfter();
   left: 0;
-  bottom: -7px;
+  bottom: -4px;
   width: 100%;
   height: 5px;
   background: var(--accent-color);
@@ -72,8 +63,7 @@ header {
   @extend %transitionTransform ;
   transform: scaleX(0);
 }
-  
-  
+
 .header__link--current::after {
   opacity: 1;
   @extend %transitionTransform ;
@@ -84,31 +74,49 @@ header {
 .header__link:focus::after {
   opacity: 1;
   transform: scalex(1); 
-  }
-  
+}
+
 /*contact*/
 
 .header__contact{ 
-  @include Flex (flex, center, none);
+  display: none;
+  @media  (min-width: 768px) {
+    display: block;
+  } 
+  @media  (min-width: 1200px) {
+    @include Flex (flex, center, none);
     
-  & li:last-child { 
-    margin-left: 50px; 
-  }
-} 
+    & li:last-child { 
+      margin-left: 50px; 
+    }
+  } 
+}
 
-.header__contact--link { 
-  @include Flex;
+.header__contact--link {
   text-align: center; 
-  color: var(--primary-text-color); 
-  @extend %fontStyleHeader;
-  @extend %paddingBot32Header;
+  color: var(--primary-text-color);
+  font-weight: 500;
+  font-size: 12px; 
+  line-height: 1.16; 
   cursor: var(--cursor);
   @extend %transitionColor;
-    
+  padding-top: 21px;
+  padding-bottom: 21px;  
+  
   &:hover,
   &:focus { 
     color: var(--accent-color);
-  } 
+  }  
+
+  @media  (min-width: 1200px) {
+    @include Flex;
+    font-weight: 500; 
+    font-size: 14px; 
+    line-height: 1.14;
+    padding-bottom: 32px;
+    padding-top: 30px;
+  }
+
 }
 
 .header__contact--link::before { 
@@ -118,7 +126,7 @@ header {
   
 .header__contact--icon{
   fill: currentColor;
-  margin-right: 10px;
+  margin-right: 8px;
   @extend %transitionFill;
   box-sizing: border-box;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -131,9 +139,34 @@ header {
   &:active {
     fill: transparent;
   }
+  @media  (min-width: 1200px){
+    margin-right: 10px; 
+  }
 }
+
+.header__contact--icon.phone{
+  max-width: 10px;
+  height: 14px;
+
+  @media  (min-width: 1200px) {
+    max-width: 10px;
+    height: 16px;
+  }
+}
+
+.header__contact--icon.email{
+  max-width: 14px;
+  height: 10px;
+  @media  (min-width: 1200px) {
+    max-width: 16px;
+    height: 12px;
   
+  }
+}
 
   
-  
-  
+.heder__button {
+  @media  (min-width: 768px) {
+    display: none;   
+  }
+}
