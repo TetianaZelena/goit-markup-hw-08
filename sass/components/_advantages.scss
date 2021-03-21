@@ -10,65 +10,56 @@
 
 .advantages__list {
   display: block;
+  text-align: center;
   
-  & li:not(:last-child) {
+  & :not(:last-child) {
     margin-bottom: 30px; 
-  }
-
-  @media screen and (min-width: 768px) {
+  } 
+  @media  (min-width: 768px){
     @include Flex(flex, baseline, none);
-    flex-wrap: wrap;
-           & :not(:last-of-type) {
-             margin-right: 30px;
-           }
-  }
-  @media screen and (min-width: 1200px) {
-    @include Flex(flex, center, none);
-    flex-wrap: nowrap;
-     
-        & :not(:last-of-type) {
-          margin-right: 30px;
-        }
+    text-align: center;
+    flex-wrap: wrap; 
+    
   
-   }
+  } 
+  @media  (min-width: 1200px){
+    @include Flex(flex, center, none);
+    text-align: center; 
+    flex-wrap: nowrap;
+    margin-top: none;
+
+    & :not(:last-child) {
+      margin-right: 30px; 
+    }
+  }
 }
 
-.advantages__icon--item {
-  min-width: 290px;
-  @media screen and (min-width: 768px) {
-    flex-basis: calc((100% - 30px) / 2);
+.advantages__icon--item{
+  min-width: 320px;
+  @media  (min-width: 768px){
     width: 354px;
+    flex-basis: calc((100% - 1* 30px) / 2);
   }
-  
-  @media screen and (min-width: 1200px) {
-    flex-basis: calc((100% - 30px) / 4);
-    width: 270px;
-    flex-wrap: nowrap;
-
+  @media  (min-width: 1200px){
+    min-width: 270px;
   }
 }
   
 .advantages__icon--svg { 
-  @include Flex(flex, center, center);
-  width: 290px;
-  height: 120px;
   background-color: #F5F4FA;
   border-radius: 4px;
-  flex-wrap: wrap;
- 
-
- @media screen and (min-width: 768px) {
-   flex-basis: calc((100% - 30px) / 2);
-   width: 354px;
- }
-
-@media screen and (min-width: 1200px) {
+  margin-bottom: 30px;
+  margin-right: 0;
+  @media  (min-width: 768px){
+    @include Flex(flex, center, center);
+    width: 354px;
+    height: 120px;
+  }
+  @media  (min-width: 1200px){
     width: 270px;
-    flex-wrap: nowrap;
-    flex-basis: calc((100% - 30px) / 4)
- }
+    height: 120px;
+  } 
 }
-
 
 .advantages__info--title { 
   text-align: left;
@@ -89,10 +80,10 @@
 
 /* what-we-do */
 .section__direction {
-display: none;
-@media screen and (min-width: 1200px) {
-display: block;
-}
+  display: none;
+  @media screen and (min-width: 1200px) {
+    display: block;
+  }
   padding-bottom: 94px;  
 }
   
