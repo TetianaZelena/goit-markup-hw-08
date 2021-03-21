@@ -12,9 +12,12 @@ header {
 } 
 
 .header__navigation{
-  @include Flex;}
+  @include Flex;
+
+}
  
 .header__menu { 
+  margin-right: auto;
   @media  (min-width: 768px) {
     display: flex;
     text-align: center;
@@ -68,7 +71,7 @@ header {
   opacity: 1;
   @extend %transitionTransform ;
   transform: scaleX(1);
-  } 
+} 
   
 .header__link:hover::after,
 .header__link:focus::after {
@@ -93,7 +96,7 @@ header {
 }
 
 .header__contact--link {
-  text-align: center; 
+  align-items:flex-start; 
   color: var(--primary-text-color);
   font-weight: 500;
   font-size: 12px; 
@@ -145,20 +148,20 @@ header {
 }
 
 .header__contact--icon.phone{
-  max-width: 10px;
+  width: 10px;
   height: 14px;
 
   @media  (min-width: 1200px) {
-    max-width: 10px;
+    width: 10px;
     height: 16px;
   }
 }
 
 .header__contact--icon.email{
-  max-width: 14px;
+  width: 14px;
   height: 10px;
   @media  (min-width: 1200px) {
-    max-width: 16px;
+    width: 16px;
     height: 12px;
   
   }
@@ -166,6 +169,17 @@ header {
 
   
 .heder__button {
+  width: 40px;
+  height: inherit;
+  border-bottom: none;
+  border: none;
+  align-items:flex-end;
+  background-color: inherit;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+
+
   @media  (min-width: 768px) {
     display: none;   
   }

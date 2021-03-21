@@ -1,33 +1,36 @@
 body { 
-  // min-width: 480px;
   color: var(--primary-text-color); 
   font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
   box-sizing: border-box;
   margin-left: auto;
   margin-right: auto;
-  // @media screen and (min-width: 768px) {
-  //   width: 796px;
-  // }
-  // @media screen and (min-width: 1200px) {
-  //   max-width: 1600px;
-  // }
-  
 }
 
 .container{ 
-  min-width: 320px;
-  padding: 0 15px; 
+  // width: 320px;
+  padding-right: 15px; 
+  padding-left: 15px;
+  margin: auto;
+  border-right: 1px solid red;
+  border-left: 1px solid red;
+
   @media screen and (min-width: 480px) {
     width: 480px;
+    border-right: 1px solid blue;
+    border-left: 1px solid blue;
   }
  
   @media screen and (min-width: 768px) {
     width: 768px;
+    border-right: 1px solid green;
+    border-left: 1px solid green;
     
   }
   @media screen and (min-width: 1200px) {
-    max-width: 1200px;
+    width: 1200px;
+    border-right: 1px solid purple;
+    border-left: 1px solid purple;
     
   }
 }
