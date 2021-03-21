@@ -18,17 +18,17 @@
   @media screen and (min-width: 768px) {
     @include Flex(flex, baseline, none);
     flex-wrap: wrap;
-          //  & :not(:last-of-type) {
-          //    margin-right: 30px;
-          //  }
+           & :not(:last-of-type) {
+             margin-right: 30px;
+           }
   }
   @media screen and (min-width: 1200px) {
     @include Flex(flex, center, none);
     flex-wrap: nowrap;
      
-        // & :not(:last-of-type) {
-        //   margin-right: 30px;
-        // }
+        & :not(:last-of-type) {
+          margin-right: 30px;
+        }
   
    }
 }

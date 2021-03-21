@@ -30,8 +30,8 @@ padding-top: 60px;
   margin-right: auto;
   fill: currentColor;
   flex-basis: calc( 100% / 2 - 30px );
-  // & :not(:last-child) {
-  //   margin-right: 30px;}
+  & :not(:last-child) {
+    margin-right: 30px;}
 
  @media screen and (min-width: 1200px){
   flex-basis: calc(100% / 6 - 30px);

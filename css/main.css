@@ -868,6 +868,9 @@ header {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+  .advantages__list :not(:last-of-type) {
+    margin-right: 30px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -883,6 +886,9 @@ header {
             justify-content: none;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
+  }
+  .advantages__list :not(:last-of-type) {
+    margin-right: 30px;
   }
 }
 
@@ -1062,6 +1068,12 @@ header {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .team__list :not(:last-of-type) {
+    margin-right: 30px;
+  }
+}
+
 .team__title {
   color: var(--title-text-color);
   font-weight: var(--font-weight-title);
@@ -1212,6 +1224,10 @@ header {
   fill: currentColor;
   -ms-flex-preferred-size: calc( 100% / 2 - 30px);
       flex-basis: calc( 100% / 2 - 30px);
+}
+
+.partniers__list :not(:last-child) {
+  margin-right: 30px;
 }
 
 @media screen and (min-width: 1200px) {
