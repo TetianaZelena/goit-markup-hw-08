@@ -9,14 +9,15 @@
   display: block;
   text-align: center;
   @media  (min-width: 768px){
-    display: inline-flex;
+    display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
   }
   @media  (min-width: 1200px){
-    display: inline-flex;
+    display: flex;
     flex-wrap: nowrap;
-    align-items: baseline;
+    align-items: flex-start;
+    justify-content: none;
   }
 }
 
@@ -33,6 +34,7 @@
   @media  (min-width: 768px){
     display: flex;
     justify-content: space-between;
+    
 
 
   }
@@ -44,9 +46,13 @@
   text-align: center;
   margin-bottom: 60px;
   
-
+  @media  (min-width: 768px){
+    padding-left: 76px;
+    margin-right: 165px;
+  }
   @media  (min-width: 1200px){
-    width: auto;
+    text-align: left;
+    padding-left: 0px;
     margin-right: 70px; 
     margin-bottom: 0px;
   }
@@ -58,7 +64,7 @@
   font-weight: var(--font-text);
   font-size: 14px; 
   line-height: 1.71;
-  min-width: 231px;
+  // min-width: 231px;
 }
   
 .footer__contact { 
@@ -79,9 +85,15 @@
   display: block;
   text-align: center;
   margin-bottom: 60px;
-  @media  (min-width: 1200px){
-    margin-bottom: 0px;
+  @media  (min-width: 768px){
     padding-right: 89px;
+
+  }
+  @media  (min-width: 1200px){
+    text-align: left;
+    margin-bottom: 0px;
+    padding-right: 0px;
+    
   }
 }
   
@@ -106,7 +118,6 @@
     margin-right: 10px;
   }
 
-  @media  (min-width: 768px){}
   @media  (min-width: 1200px){
     @include Flex (flex, center, right);
     width: 206px;
@@ -157,10 +168,9 @@
     display: flex;
     justify-content: right ;
     align-content: center;
-    text-align: center; 
     margin-left: 93px; 
     margin-right: auto;
-    flex-direction: none;
+    flex-direction: row;
   }
   
   
@@ -170,12 +180,11 @@
   display: block;
   margin-bottom: 20px;
   @media  (min-width: 1200px){
-  @include Flex(flex, flex-start, right);
-  flex-direction: column;
-  margin-right: 12px;
-  margin-bottom: 0px;
-  
-}
+    @include Flex(flex, flex-start, right);
+    flex-direction: column;
+    margin-right: 12px;
+    margin-bottom: 0px;
+  }
 }
   
 .footer__form--text {
@@ -189,8 +198,6 @@
   font-weight: var(--font-weight-title);
   margin-bottom: 20px;
   @media  (min-width: 1200px){
-    // до установки дисплея блока флекс не устнавливался
-    @include Flex(flex, flex-start, right);
     text-align: end;
   
   }
@@ -201,7 +208,7 @@
   line-height: 1.25;
   font-weight: var(--font-text);
   color: var(--whate-laetters);
-  width: 358px;
+  min-width: 290px;
   height: 50px;
   background-color: var(--hero-foot-bg-color);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -211,8 +218,14 @@
   padding-left: 16px;
   padding-top: 15px ;
   padding-bottom: 15px;
+  @media  (min-width: 480px){
+    min-width: 450px;
+  }
+  @media  (min-width: 1200px){
+    min-width: 358px; 
+  }
 }
-  
+
 .footer__form--input::placeholder{
   color: rgba(255, 255, 255, 0.6);
   font-size: 16px;

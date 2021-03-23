@@ -91,8 +91,8 @@
 } 
   
 .hero__modal { 
-  max-width: 528px;
-  max-height: 581px;
+  max-width: 260px;
+  min-height: 419px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   background-color: var( --whate-laetters);
@@ -103,6 +103,19 @@
   left: 50%;
   transform: scale(1) translate(-50%, -50%); 
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @media  (min-width: 480px){
+    min-width: 450px;
+    min-height: 609px;
+
+  }
+  @media  (min-width: 768px){
+  
+  }
+  @media  (min-width: 1200px){
+    max-width: 528px;
+    max-height: 581px;
+  }
+
 }
 
 .hero__modal--title{ 
@@ -120,7 +133,10 @@
 .hero__form--modal{
   display: flex;
   flex-direction: column;
-  width: 448px;
+  @media  (min-width: 1200px){
+    min-width: 448px;
+  }
+  
 }
 
 .hero__form--modal .input {

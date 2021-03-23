@@ -24,7 +24,7 @@
 }
   
 .partniers__list {
-  @include Flex (flex, baseline, space-between);
+  @include Flex (flex, none, space-between);
   text-align: center;
   flex-wrap: wrap; 
    

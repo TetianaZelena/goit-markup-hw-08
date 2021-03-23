@@ -13,6 +13,7 @@ header {
 
 .header__navigation{
   @include Flex;
+  position: relative;
 
 }
  
@@ -178,9 +179,34 @@ header {
   padding-right: 10px;
   padding-bottom: 10px;
   padding-top: 10px;
-
-
+  
+  
   @media  (min-width: 768px) {
     display: none;   
+  }
+
+}
+
+.heder__button .icone__cross{
+  display: none;
+  }
+
+.heder__button.is-open .icone__cross{
+  display: block;
+}
+
+.heder__button.is-open .icone__cross{
+  display: none;
+}
+
+.mobail__menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  
+  &.is-open {
+    display: block;
   }
 }

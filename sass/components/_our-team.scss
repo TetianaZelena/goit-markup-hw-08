@@ -6,7 +6,7 @@
   @media screen and (min-width: 1200px) {
     padding-bottom: 94px;
     padding-top: 94px;
-}
+  }
 }
 
   
@@ -28,7 +28,8 @@
     flex-wrap: nowrap;
     
     & :not(:last-of-type) {
-      margin-bottom: 0px;}
+      margin-bottom: 0px;
+    }
 
     & :not(:last-of-type) {
       margin-right: 30px; 
