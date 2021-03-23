@@ -2,11 +2,22 @@
   background-color: var(--hero-foot-bg-color);
   padding-top: 60px; 
   padding-bottom: 60px;
+
 }
 
 .footer__container {
-  display: inline-flex;
-  align-items: baseline;
+  display: block;
+  text-align: center;
+  @media  (min-width: 768px){
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  @media  (min-width: 1200px){
+    display: inline-flex;
+    flex-wrap: nowrap;
+    align-items: baseline;
+  }
 }
 
 .footer__logo{
@@ -14,17 +25,35 @@
 }
     
 .footer__link {
+  text-align: center;
   margin-bottom: 20px;
 }
 
-.footer__info{
-  width: auto;
-  margin-right: 70px;
-}
-  
-/*footer address*/
+.fotter__box--geometric{
+  @media  (min-width: 768px){
+    display: flex;
+    justify-content: space-between;
 
-.footer__address { color: var(--whate-laetters); 
+
+  }
+}
+
+/*footer address*/
+.footer__info{
+  display: block;
+  text-align: center;
+  margin-bottom: 60px;
+  
+
+  @media  (min-width: 1200px){
+    width: auto;
+    margin-right: 70px; 
+    margin-bottom: 0px;
+  }
+}
+
+.footer__address { 
+  color: var(--whate-laetters); 
   font-style: normal; 
   font-weight: var(--font-text);
   font-size: 14px; 
@@ -41,13 +70,19 @@
 }
   
 .footer__contact--mail { 
-  display: inline-block;
+  display: block;
   margin-top: 9px;
 }
   
 /* footer join */ 
 .footer__join { 
- 
+  display: block;
+  text-align: center;
+  margin-bottom: 60px;
+  @media  (min-width: 1200px){
+    margin-bottom: 0px;
+    padding-right: 89px;
+  }
 }
   
   
@@ -59,18 +94,25 @@
   font-weight: var(--font-weight-title);
 }
   
-.footer__networks{ @include Flex (flex, center, right);
-  align-content: flex-start;
+.footer__networks{ 
+  @include Flex (flex, center, center);
   text-align: center;
-  width: 206px;
-  height: 44px;
-  margin-left: auto;
+ 
   margin-top: 20px;
-  margin-bottom: 0px;
+  
   @extend %transitionBackgrColor;
   
   & :not(:last-child) {
     margin-right: 10px;
+  }
+
+  @media  (min-width: 768px){}
+  @media  (min-width: 1200px){
+    @include Flex (flex, center, right);
+    width: 206px;
+    height: 44px;
+    margin-left: auto;
+    margin-bottom: 0px;
   }
 }
 
@@ -101,21 +143,44 @@
 /* footer-subscription */
   
 .footer__form{ 
-  display: flex;
-  justify-content: right ;
-  align-content: center;
-  text-align: center; 
-  margin-left: 93px; 
-  margin-right: auto;
+  display: block;
+  text-align: center;
+  @media  (min-width: 768px) {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+  }
+  @media  (min-width: 1200px){
+    display: flex;
+    justify-content: right ;
+    align-content: center;
+    text-align: center; 
+    margin-left: 93px; 
+    margin-right: auto;
+    flex-direction: none;
+  }
+  
+  
 }
 
 .footer__form--subscribe {
+  display: block;
+  margin-bottom: 20px;
+  @media  (min-width: 1200px){
   @include Flex(flex, flex-start, right);
   flex-direction: column;
   margin-right: 12px;
+  margin-bottom: 0px;
+  
+}
 }
   
 .footer__form--text {
+  display: block;
+  text-align: center;
   color: var(--whate-laetters);
   font-size: 14px;
   line-height: 1.71;
@@ -123,7 +188,12 @@
   text-transform: uppercase;
   font-weight: var(--font-weight-title);
   margin-bottom: 20px;
-  text-align: end;
+  @media  (min-width: 1200px){
+    // до установки дисплея блока флекс не устнавливался
+    @include Flex(flex, flex-start, right);
+    text-align: end;
+  
+  }
 }
   
 .footer__form--input{
@@ -152,7 +222,10 @@
   
 .footer__form--button {
   @extend %buttonMain;
-  margin-top: 43px; 
+  @media  (min-width: 1200px){
+    margin-top: 43px; 
+  }
+  
 }
   
 .footer__form--icon {

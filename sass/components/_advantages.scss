@@ -12,33 +12,32 @@
   display: block;
   text-align: center;
   
-  & :not(:last-child) {
+  & :not(:last-of-type) {
     margin-bottom: 30px; 
   } 
   @media  (min-width: 768px){
-    @include Flex(flex, baseline, none);
+    @include Flex (flex, baseline, space-between);
     text-align: center;
     flex-wrap: wrap; 
-    
-  
   } 
   @media  (min-width: 1200px){
     @include Flex(flex, center, none);
     text-align: center; 
     flex-wrap: nowrap;
-    margin-top: none;
+    
+    & :not(:last-of-type) {
+      margin-bottom: 0px;
+    }
 
-    & :not(:last-child) {
+    & :not(:last-of-type) {
       margin-right: 30px; 
     }
   }
 }
 
 .advantages__icon--item{
-  min-width: 320px;
   @media  (min-width: 768px){
-    width: 354px;
-    flex-basis: calc((100% - 1* 30px) / 2);
+    width: calc((100% - 30px) / 2);
   }
   @media  (min-width: 1200px){
     min-width: 270px;
