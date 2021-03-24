@@ -36,7 +36,7 @@
             aria-controls="mobile-menu" >
                 <svg class="heder__icon--open" 
                 aria-label="mobile menu open" width="40" height="40">
-                    <use class="icone__menu" href="./icons_svg.svg#icon-menu"></use>
+                    <use class="icone__menu" href="./icon-menu-mobail.svg#icon-open-mobile"></use>
                     </svg>
             </button>
             
@@ -44,22 +44,30 @@
 <!--conteiner-->
     </header>
     <main>
-        <div class="menu-container  js-menu-container"  id="mobile-menu">
+        <div class="menu-container menu-container--mobile  js-menu-container"  id="mobile-menu">
                 <button type="button" class="menu-toggle js-close-menu" >
                     <svg class="heder__icon--close" 
-                aria-label="mobile menu close" width="40" height="40">
-                    <use class="icone__cross" href="./images/symbol-defs.svg#icon-close-mobail" ></use>
+                aria-label="mobile menu close" width="18.65" height="18.65">
+                    <use class="icone__cross" href="./icon-menu-mobail.svg#icon-close-mobile" ></use>
                     </svg></button>
-                <ul class="mobile__menu list">
+        <div class="mobile__menu">
+                <ul class="mobile__menu--list list">
                     <li> <a href="./index.html" class="mobile__menu--link mobile__menu--link--current">Студия </a></li>
                     <li> <a href="./portfolio.html" class="mobile__menu--link">Портфолио</a></li>
                     <li> <a href="#" class="mobile__menu--link">Контакты</a></li>
                 </ul>
                 <ul class="mobile__contact--list list">
-                    <li > <a  href="tel:+380961111111" class="mobile__contact--link" aria-label="phone">+38 096111 11 11 </a></li> 
-                    <li> <a href="mailto:info@devstudio.com" class="mobile__contact--link"  aria-label="envelope"> 
+                    <li class="mobile__contact--item phone"> <a class="mobile__contact--link phone" href="tel:+380961111111"  aria-label="phone">+38 096111 11 11 </a></li> 
+                    <li class="mobile__contact--item mail" > <a class="mobile__contact--link mail" href="mailto:info@devstudio.com"  aria-label="envelope"> 
                         info@devstudio.com </a></li>
-                </ul>
+                </ul> 
+                    <ul class="mobile__social list">
+                       <li> <a href="#" class="mobile__social--link" aria-label="Instagram">Instagram</a> </li>
+                       <li> <a href="#" class="mobile__social--link" aria-label="Twitter">Twitter</a> </li>
+                       <li> <a href="#" class="mobile__social--link" aria-label="Facebook">Facebook</a> </li>
+                       <li> <a href="#" class="mobile__social--link" aria-label="LinkedIn">LinkedIn</a> </li>
+                    </ul>
+            </div>
             </div>
         <!--Hero  -->
         <section class="hero">
