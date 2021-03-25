@@ -108,22 +108,21 @@
 .portfolio__project {
   display: block;
   flex-wrap: wrap;
-  margin-right: 0px; 
+  margin: -15px;
+  object-fit: contain;
 
   @media  (min-width: 768px){
     display: flex;
-    margin-right: 0px;
-
-  }
-  @media  (min-width: 1200px){
-    & :nth-last-of-type(n+4) {
-      margin-bottom: 30px; 
     }
-  }
+  // @media  (min-width: 1200px){
+  //   & :nth-last-of-type(n+4) {
+  //     margin-bottom: 30px; 
+  //   }
+  // }
     
-  & :nth-child(3n){
-    margin-right: 0px;
-  }
+  // & :nth-child(3n){
+  //   margin-right: 0px;
+  // }
   // & :not(:nth-last-child(3n)){
   //   margin-right: 30px;
   // }
@@ -151,12 +150,12 @@
 
 .project__item { 
   display: block;
+  width: fill;
   background-color: var( --white-bg-color); 
-  max-width: 450px; 
-  max-height: 404px; 
   border: 1px solid #EEEEEE;
   box-sizing: border-box;
   @extend %transitionBoxShadow;
+  margin: 15px;
  
   // изминения в размере для моб 290
 
@@ -164,23 +163,32 @@
   &:focus {  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);  
   } 
   
-  &:active {
-    fill: transparent;
-  }
-// перенесла все для 1200
-  @media  (min-width: 1200px){
-    @include Flex(flex, center, center);
-    min-width: 370px; 
-    margin-right: 30px; 
-    flex-basis: calc( 100% / 3 - 30px ); 
-  }
+    &:active {
+      fill: transparent;
+    }
+    @media  (min-width: 480px){
+      max-width: 450px;
+    }
+    @media  (min-width: 768px){
+      @include Flex(flex, center, center);
+      max-width: 354px;
+      max-height: 536px;
+      flex-basis: calc( 100% / 2 - 30px ); 
+    }
+
+    @media  (min-width: 1200px){
+      max-width: 370px;
+      max-height: 404px;
+      flex-basis: calc( 100% / 3 - 30px ); 
+    }
+    
 }
   
 .project__thumb {
   position: relative;  
   overflow: hidden;
   border-style: none;
-  min-width: 290px;
+  // min-width: 290px;
   // изменила размер дла моб
 // перенесла все для 1200
   @media  (min-width: 1200px){
@@ -190,23 +198,18 @@
  
 }
 
+
 // Basic for img//
 .cart-img {
   display: block;
-  max-width: 100%;
-  @media  (min-width: 480px){
-    max-width: 100%;
-    height: auto;
+ 
+  
+  object-fit: cover;
+  @media  (max-width: 767px){
+    width: 100%;
+     height: auto;
   }
-  @media  (min-width: 768px){
-    max-width: 100%;
-    height: auto;
-  }
-
-  @media  (min-width: 1200px){
-    max-width: 100%;
-    height: auto;
-  }
+  
 }
   
 .project__overlay { 
