@@ -19,7 +19,7 @@
   width: 100%;
   background-size: cover;
   background-color: var(--hero-foot-bg-color);
-  background-image: linear-gradient( to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero1x.jpg); 
+  background-image: linear-gradient( to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero1x.jpg); 
   background-repeat: no-repeat;
   background-position: center;
   text-align: center;
@@ -28,7 +28,7 @@
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     .hero {
-      background-image: url(/images/hero2x.jpg);
+      background-image: url(../images/hero2x.jpg);
     }
   }
 
@@ -43,8 +43,8 @@
 }
 
 .hero__container { 
-  font-size: 44px;
-  letter-spacing: 0.06em;
+  font-size: $FontSize44;
+  letter-spacing: $LetterSpacing06;
   text-align: center;
   padding-bottom: 118px;
   padding-top: 118px;
@@ -59,20 +59,20 @@
   
 .hero__title { 
   color: var(--whate-laetters); 
-  font-weight: 900; 
-  font-size: 0.433em;
-  line-height: 1.62; 
+  font-weight: var(--font-weight900);
+  font-size: $FontSize0-433em;
+  line-height: $LineHeight1-62;
   text-transform: uppercase;
   align-items: center; 
   margin-bottom: 30px;
   
   @media  (min-width: 480px) {
-    font-size: 0.59em; 
+    font-size: $FontSize0-59em;
     height: 84px;
   }
   @media  (min-width: 1200px) {
-    font-size: 1em; 
-    line-height: 1.36;
+    font-size: $FontSize1em;
+    line-height: $LineHeight1-36;
     height: 120px;
     margin-bottom: 40px; 
   }
@@ -149,10 +149,10 @@
 }
 
 .hero__modal--title{ 
-  font-size: 20px;
-  line-height: 1.15;
+  font-size: $FontSize20;
+  line-height: $LineHeight1-15;
   text-align: center;
-  letter-spacing: 0.03em;
+  letter-spacing: $LetterSpacing03;
   color: var(--title-text-color);
   font-weight: var(--font-weight-title);
   margin: 0;
@@ -181,9 +181,9 @@
   flex-direction: column;
   text-align: right;
   color: var(--primary-text-color);
-  font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.01em;
+  font-size: $FontSize12;
+  line-height: $LineHeight1-16;
+  letter-spacing: $LetterSpacing01;
   font-weight: var(--font-text);
   width: 100%;
   cursor: pointer;
@@ -193,6 +193,11 @@
 .hero__form--userdate{
   position: relative;
   margin-bottom: 10px;
+}
+
+.hero__form--title--property {
+  display: inline-block;
+  margin-top: 4px;
 }
 
 .hero__form--element {
@@ -206,7 +211,9 @@
   height: 18px;
   top: 50%;
   transform: translate(50%);
-  @extend %transitionBackgrColor; 
+  @extend %transitionColor;
+  @extend %transitionFill;
+
 }
 
 .hero__form--label{ 
@@ -219,7 +226,8 @@
   padding-top: 11px;
   padding-bottom: 11px;
   padding-left: 41px;
-  @extend %transitionBackgrColor; 
+  @extend %transitionBorder;
+
   @extend %HoverFocuseFormStyle;
 }
 
@@ -237,10 +245,10 @@
 
 .hero__form--coments--text::placeholder {
   color: rgba(117, 117, 117, 0.5);
-  font-size: 12px;
-  line-height: 1.16;
+  font-size: $FontSize12;
+  line-height: $LineHeight1-16;
   font-weight: var(--font-text);
-  letter-spacing: 0.01em;
+  letter-spacing: $LetterSpacing01;
 }
 
 .hero__form--coments--text{
@@ -254,7 +262,7 @@
   padding-right: 16px;
   padding-top: 14px;
   padding-bottom: 12px;
-  @extend %transitionBackgrColor;
+  @extend %transitionBorder;
   @extend %HoverFocuseFormStyle;
 }
 
@@ -267,18 +275,18 @@
 }
 
 .hero__form--agree--title {
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: 0.03em;
+  font-size: $FontSize14;
+  line-height: $LineHeight1-71;
+  letter-spacing: $LetterSpacing03;
   font-weight: var(--font-text);
   color: var(--primary-text-color);
 }
   
 .hero__form--agree--link{ 
   color: var(--accent-color);  
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
+  font-size: $FontSize14;
+  line-height: $LineHeight1-71;
+  letter-spacing: $LetterSpacing03;
   font-weight: var(--font-text);
   cursor: pointer;
   text-decoration-line: underline;
@@ -326,7 +334,7 @@
   background-color: #FFFFFF;
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  @extend %transitionFill;
+
   
   & :hover {
     fill: var(--accent-color);
@@ -341,6 +349,8 @@
   display: flex;
   align-items: center;
   margin: auto;
+  @extend %transitionColor;
+  @extend %transitionFill;
 }
 
 .form__button--submit {

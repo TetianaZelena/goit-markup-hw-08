@@ -36,16 +36,16 @@
   border-radius: 4px; 
   background-color: #F5F4FA; 
   outline: none;
-  letter-spacing: 0.03em; 
+  letter-spacing: $LetterSpacing03;
   color: var(--title-text-color); 
-  line-height: 1.62;
-  font-weight: 500;
-  font-size: 0.98em; 
+  line-height: $LineHeight1-62;
+  font-weight: var(--font-weight500);
+  font-size: $FontSize0-98em;
   min-width: 73px;
   min-height: 38px;
-  @extend %transitionBackgrColor; 
-  @extend %transitionColor;
-  @extend %transitionBoxShadow;
+  transition-property: background-color, fill, border, color, box-shadow;
+  transition-duration: var(--duration-time);
+  transition-timing-function: var(--cubic-function);
 
   &:hover,
   &:focus { 
@@ -61,7 +61,7 @@
     margin-right: 8px;
   }
   @media screen and (min-width: 480px) {
-    font-size: 16px;
+    font-size: $FontSize16;
     padding: 6px 22px;
    
   }
@@ -72,7 +72,7 @@
   flex-direction: row; 
   margin-bottom: 40px; 
   flex-wrap: wrap;
-  font-size: 16px;
+  font-size: $FontSize16;
   
   @media  (max-width: 479px){
     margin-right: -8px;
@@ -113,20 +113,8 @@
 
   @media  (min-width: 768px){
     display: flex;
-    }
-  // @media  (min-width: 1200px){
-  //   & :nth-last-of-type(n+4) {
-  //     margin-bottom: 30px; 
-  //   }
-  // }
-    
-  // & :nth-child(3n){
-  //   margin-right: 0px;
-  // }
-  // & :not(:nth-last-child(3n)){
-  //   margin-right: 30px;
-  // }
-
+  }
+  
 }
   
 .progect__content { 
@@ -141,10 +129,10 @@
 
 .project__link  h2{ 
   color: var(--title-text-color); 
-  letter-spacing: 0.06em; 
+  letter-spacing: $LetterSpacing06;
   font-weight: var(--font-weight-title); 
-  font-size: 18px;
-  line-height: 2.00; 
+  font-size: $FontSize18;
+  line-height: $LineHeight2-00;
   margin-bottom: 4px; 
 }
 
@@ -188,9 +176,7 @@
   position: relative;  
   overflow: hidden;
   border-style: none;
-  // min-width: 290px;
-  // изменила размер дла моб
-// перенесла все для 1200
+
   @media  (min-width: 1200px){
     max-width: 368px;
     height: 294px;
@@ -220,8 +206,8 @@
   overflow: hidden;
   color: var(--whate-laetters); 
   font-weight: var(--font-text);
-  font-size: 18px;
-  line-height: 1.57;
+  font-size: $FontSize18;
+  line-height: $LineHeight1-57;
   background-color: rgba(33, 150, 243, 0.9);
   padding: 63px 24px ;
   transform: translateY(100%);

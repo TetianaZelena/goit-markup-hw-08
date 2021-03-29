@@ -62,8 +62,8 @@
   color: var(--whate-laetters); 
   font-style: normal; 
   font-weight: var(--font-text);
-  font-size: 14px; 
-  line-height: 1.71;
+  font-size: $FontSize14;
+  line-height: $LineHeight1-71;
   // min-width: 231px;
 }
   
@@ -71,7 +71,8 @@
   display: block;
   color: rgba(255, 255, 255, 0.6); 
   font-weight: var(--font-text);   
-  font-size: 14px; line-height: 1.71;
+  font-size: $FontSize14;
+  line-height: $LineHeight1-71;
   margin-top: 9px;
 }
   
@@ -100,8 +101,8 @@
   
 .footer__join--title {
   color: var(--whate-laetters);
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: $FontSize14;
+  line-height: $LineHeight1-71;
   text-transform: uppercase;
   font-weight: var(--font-weight-title);
 }
@@ -191,9 +192,9 @@
   display: block;
   text-align: center;
   color: var(--whate-laetters);
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
+  font-size: $FontSize14;
+  line-height: $LineHeight1-71;
+  letter-spacing: $LetterSpacing03;
   text-transform: uppercase;
   font-weight: var(--font-weight-title);
   margin-bottom: 20px;
@@ -204,8 +205,8 @@
 }
   
 .footer__form--input{
-  font-size: 16px;
-  line-height: 1.25;
+  font-size: $FontSize16;
+  line-height: $LineHeight1-25;
   font-weight: var(--font-text);
   color: var(--whate-laetters);
   min-width: 290px;
@@ -228,8 +229,8 @@
 
 .footer__form--input::placeholder{
   color: rgba(255, 255, 255, 0.6);
-  font-size: 16px;
-  line-height: 1.25;
+  font-size: $FontSize16;
+  line-height: $LineHeight1-25;
   font-weight: var(--font-text);
 }
   

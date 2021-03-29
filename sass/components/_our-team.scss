@@ -40,15 +40,15 @@
 .team__title {  
   color: var(--title-text-color); 
   font-weight: var(--font-weight-title); 
-  font-size: 28px; 
-  line-height: 1.17; 
+  font-size: $FontSize28;
+  line-height: $LineHeight1-17;
   text-align: center; 
   margin-bottom: 30px;
 
 
   @media screen and (min-width: 1200px) {
-    font-size: 36px; 
-    line-height: 1.16; 
+    font-size: $FontSize36;
+    line-height: $LineHeight1-16;
     margin-bottom: 50px;
   }
    
@@ -127,8 +127,9 @@
   cursor: var(--cursor);
   color: #AFB1B8;
   fill: currentColor;
-  @extend %transitionBackgrColor;
-  @extend %transitionFill;
+  transition-property: background-color, fill;
+  transition-duration: var(--duration-time);
+  transition-timing-function: var(--cubic-function);
   
   &:hover,
   &:focus{

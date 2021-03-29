@@ -1,13 +1,15 @@
-:root { 
-  --accent-color: #2196F3; 
-  --hero-foot-bg-color: #2F303A; 
+
+:root {
+  --accent-color: #2196F3;
+  --hero-foot-bg-color: #2F303A;
+  --font-weight900: 900;
   --font-weight-title: 700;
-  --font-weight-menu: 500;
+  --font-weight500: 500;
   --font-text: 400;
-  --primare-bg-color: #E5E5E5; 
-  --primary-text-color: #757575; 
+  --primare-bg-color: #E5E5E5;
+  --primary-text-color: #757575;
   --title-text-color: #212121;
-  --whate-laetters: #fff;  
+  --whate-laetters: #fff;
   --paddingbottom-header-elements: 30px;
   --cubic-function: cubic-bezier(0.4, 0, 0.2, 1);
   --duration-time: 250ms;
@@ -15,6 +17,47 @@
   --cursor: pointer;
   --phone: 480px;
   --tablet: 738px;
-  --desktop: 1170px; 
+  --desktop: 1170px;
 }
+
+$FontSize44: 44px;
+$FontSize40: 40px;
+$FontSize36: 36px;
+$FontSize34: 34px;
+$FontSize28: 28px;
+$FontSize26: 26px;
+$FontSize24: 24px;
+$FontSize20: 20px;
+$FontSize18: 18px;
+$FontSize16: 16px;
+$FontSize14: 14px;
+$FontSize12: 12px;
+
+$FontSize0-59em: 0.59em;
+$FontSize0-98em: 0.98em;
+$FontSize0-433em: 0.433em;
+$FontSize1em: 1em;
+$FontSize1-8em: 1.8em;
+$FontSize2-6em: 2.6em;
+$FontSize1-433em: 1.433em;
+$FontSize1-45em: 1.45em;
+
+$LineHeight1-14: 1.14;
+$LineHeight1-15: 1.15;
+$LineHeight1-16: 1.16;
+$LineHeight1-17: 1.17;
+$LineHeight1-19: 1.19;
+$LineHeight1-22: 1.22;
+$LineHeight1-25: 1.25;
+$LineHeight1-36: 1.36;
+$LineHeight1-57: 1.57;
+$LineHeight1-62: 1.62;
+$LineHeight1-71: 1.71;
+$LineHeight1-87: 1.87;
+$LineHeight2-00: 2.00;
+
+$LetterSpacing01: 0.01em;
+$LetterSpacing02: 0.02em;
+$LetterSpacing03: 0.03em;
+$LetterSpacing06: 0.06em;
 

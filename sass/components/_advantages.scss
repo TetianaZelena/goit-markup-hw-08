@@ -64,8 +64,8 @@
   text-align: left;
   color: var(--title-text-color);
   font-weight: var(--font-weight-title); 
-  font-size: 14px; 
-  line-height: 1.14;  
+  font-size: $FontSize14;
+  line-height: $LineHeight1-14;
   text-transform: uppercase; 
   margin-bottom: 10px;
 }
@@ -73,8 +73,8 @@
 .advantages__info--text { 
   text-align: left;
   font-weight: var(--font-text); 
-  font-size: 14px; 
-  line-height: 1.71; 
+  font-size: $FontSize14;
+  line-height: $LineHeight1-71;
 } 
 
 /* what-we-do */
@@ -90,8 +90,8 @@
   text-align: center;
   color: var(--title-text-color); 
   font-weight: var(--font-weight-title); 
-  font-size: 36px; 
-  line-height: 1.16; 
+  font-size: $FontSize36;
+  line-height: $LineHeight1-16;
   min-width: min-content;  
   margin-bottom: 50px;   
 }
@@ -127,8 +127,8 @@
   left: 0px;
   overflow: hidden;
   font-weight: var(--font-weight-title); 
-  font-size: 14px; 
-  line-height: 1.17px; 
+  font-size: $FontSize14;
+  line-height: $LineHeight1-17;
   text-transform: uppercase;
   color: var(--whate-laetters);
   width: 100%;

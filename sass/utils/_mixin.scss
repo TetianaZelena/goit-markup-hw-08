@@ -1,0 +1,18 @@
+@mixin textFont () {
+    color: var(--primary-text-color);
+    font-weight: var(--font-text);
+    font-size: 16px;
+    line-height: 1.87;
+}
+
+@mixin Flex ($display:flex, $align-items: center, $justify-content: space-between) {
+    display: $display;
+    align-items: $align-items;
+    justify-content: $justify-content;
+}
+
+@mixin positionAbsoluteAfter ($display:block, $position: absolute, $content: '') {
+    display: $display;
+    position: $position;
+    content: $content;
+}
