@@ -38,7 +38,7 @@ header {
   @extend %fontStyleHeader;
   position: relative;
   padding-bottom: 32px;
-  padding-top: 30px;
+  padding-top: 32px;
   @extend %transitionColor;
   
   &:hover,
@@ -82,6 +82,13 @@ header {
   display: none;
   @media  (min-width: 768px) {
     display: block;
+  }
+  @media (max-width: 1199px){
+    padding-top: 21px;
+    padding-bottom: 21px;
+    & :not(:last-child){
+      margin-bottom: 10px;
+    }
   } 
   @media  (min-width: 1200px) {
     @include Flex (flex, center, none);
@@ -100,8 +107,7 @@ header {
   line-height: $LineHeight1-16;
   cursor: var(--cursor);
   @extend %transitionColor;
-  padding-top: 21px;
-  padding-bottom: 21px;  
+
   
   &:hover,
   &:focus { 
@@ -171,17 +177,19 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  min-width: 100vw;
-  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
   z-index: 2;
   background-color: var(--white-bg-color);
   transform: translateX(100%);
 }
 
 .menu-container.is-open  {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
   padding: 2.9em 2em;
-  min-width: 100%;
-  min-height: 100%;
+  overflow: auto;
   transform: translateX(0);
   @media  (min-width: 480px) {
     padding: 48px 40px;
@@ -189,8 +197,7 @@ header {
 }
 
 .mobile__menu {
-  min-width: 100%;
-  min-height: 100%;
+  overflow-y: scroll;
 }
 
 .menu-toggle{
@@ -284,7 +291,7 @@ header {
 .mobile__social--link{
   width: calc((100% - 34px) / 4);
   line-height: $LineHeight1-22;
-  font-weight: var(--font-weight-menu);
+  font-weight: var(--font-weight500);
   letter-spacing: $LetterSpacing02;
   color: var(--accent-color);
   padding-right: 10px;
@@ -296,7 +303,7 @@ header {
 }
 
 .mobile__menu--link {
-  font-weight: var(--font-weight-menu);
+  font-weight: var(--font-weight500);
   font-size: $FontSize2-6em;
   line-height: $LineHeight1-17;
   letter-spacing: $LetterSpacing02;
@@ -318,7 +325,7 @@ header {
 }
   
 .mobile__contact--link.phone {
-  font-weight: var(--font-weight-menu);
+  font-weight: var(--font-weight500);
   font-size: $FontSize1-8em;
   line-height: $LineHeight1-17;
   letter-spacing: $LetterSpacing02;
@@ -330,7 +337,7 @@ header {
 } 
 
 .mobile__contact--link.mail{ 
-  font-weight: var(--font-weight-menu);
+  font-weight: var(--font-weight500);
   color: var(--title-text-color);
   font-size: $FontSize1-45em;
   line-height: $LineHeight1-16;

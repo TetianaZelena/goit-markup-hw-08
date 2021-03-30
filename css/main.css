@@ -251,7 +251,7 @@ header {
   letter-spacing: 0.02em;
   position: relative;
   padding-bottom: 32px;
-  padding-top: 30px;
+  padding-top: 32px;
 }
 
 .header__link:hover, .header__link:focus {
@@ -300,6 +300,16 @@ header {
   }
 }
 
+@media (max-width: 1199px) {
+  .header__contact {
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+  .header__contact :not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
 @media (min-width: 1200px) {
   .header__contact {
     display: -webkit-box;
@@ -326,8 +336,6 @@ header {
   font-size: 12px;
   line-height: 1.16;
   cursor: var(--cursor);
-  padding-top: 21px;
-  padding-bottom: 21px;
 }
 
 .header__contact--link:hover, .header__contact--link:focus {
@@ -414,8 +422,8 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  min-width: 100vw;
-  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
   z-index: 2;
   background-color: var(--white-bg-color);
   -webkit-transform: translateX(100%);
@@ -423,9 +431,16 @@ header {
 }
 
 .menu-container.is-open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: fixed;
   padding: 2.9em 2em;
-  min-width: 100%;
-  min-height: 100%;
+  overflow: auto;
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
@@ -437,8 +452,7 @@ header {
 }
 
 .mobile__menu {
-  min-width: 100%;
-  min-height: 100%;
+  overflow-y: scroll;
 }
 
 .menu-toggle {
@@ -534,7 +548,7 @@ header {
 .mobile__social--link {
   width: calc((100% - 34px) / 4);
   line-height: 1.22;
-  font-weight: var(--font-weight-menu);
+  font-weight: var(--font-weight500);
   letter-spacing: 0.02em;
   color: var(--accent-color);
   padding-right: 10px;
@@ -550,7 +564,7 @@ header {
 }
 
 .mobile__menu--link {
-  font-weight: var(--font-weight-menu);
+  font-weight: var(--font-weight500);
   font-size: 2.6em;
   line-height: 1.17;
   letter-spacing: 0.02em;
@@ -574,7 +588,7 @@ header {
 }
 
 .mobile__contact--link.phone {
-  font-weight: var(--font-weight-menu);
+  font-weight: var(--font-weight500);
   font-size: 1.8em;
   line-height: 1.17;
   letter-spacing: 0.02em;
@@ -589,7 +603,7 @@ header {
 }
 
 .mobile__contact--link.mail {
-  font-weight: var(--font-weight-menu);
+  font-weight: var(--font-weight500);
   color: var(--title-text-color);
   font-size: 1.45em;
   line-height: 1.16;
@@ -706,6 +720,14 @@ header {
   text-align: center;
 }
 
+@media (min-width: 1200px) {
+  .hero {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero .hero {
     background-image: url(../images/hero2x.jpg);
@@ -714,7 +736,7 @@ header {
 
 @media (min-device-pixel-ratio: 3), (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
   .hero .hero {
-    background-image: url(../images/hero-3x.jpg);
+    background-image: url(../images/hero3x.jpg);
   }
 }
 
@@ -1204,7 +1226,7 @@ header {
 }
 
 .advantages__info--title {
-  text-align: left;
+  text-align: center;
   color: var(--title-text-color);
   font-weight: var(--font-weight-title);
   font-size: 14px;
@@ -1617,8 +1639,6 @@ header {
   fill: currentColor;
   border: 1px solid #AFB1B8;
   border-radius: 4px;
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   -webkit-transition-property: background-color, fill, border,color, -webkit-box-shadow;
   transition-property: background-color, fill, border,color, -webkit-box-shadow;
   transition-property: background-color, fill, border,color, box-shadow;
@@ -1710,6 +1730,8 @@ header {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    padding-left: 61px;
+    padding-right: 74px;
   }
 }
 
@@ -1722,7 +1744,6 @@ header {
 
 @media (min-width: 768px) {
   .footer__info {
-    padding-left: 76px;
     margin-right: 165px;
   }
 }
@@ -1763,12 +1784,6 @@ header {
   display: block;
   text-align: center;
   margin-bottom: 60px;
-}
-
-@media (min-width: 768px) {
-  .footer__join {
-    padding-right: 89px;
-  }
 }
 
 @media (min-width: 1200px) {
@@ -2206,7 +2221,6 @@ header {
   width: -moz-available;
   width: fill;
   background-color: var(--white-bg-color);
-  border: 1px solid #EEEEEE;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 15px;
