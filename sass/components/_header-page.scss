@@ -304,10 +304,12 @@ header {
 
 .mobile__menu--link {
   font-weight: var(--font-weight500);
-  font-size: $FontSize2-6em;
+  font-size: $FontSize40;
   line-height: $LineHeight1-17;
   letter-spacing: $LetterSpacing02;
   color: var(--title-text-color);
+  cursor: var(--cursor);
+  @extend %transitionColor;
  
   @media  (max-width: 480px) {
     font-size: $FontSize40;
@@ -316,7 +318,6 @@ header {
   &:hover,
   &:focus { 
     color: var(--accent-color);
-    // @extend %transitionTransform ;
   } 
 }
 
@@ -326,11 +327,19 @@ header {
   
 .mobile__contact--link.phone {
   font-weight: var(--font-weight500);
-  font-size: $FontSize1-8em;
+  font-size: $FontSize34;
   line-height: $LineHeight1-17;
   letter-spacing: $LetterSpacing02;
   margin-bottom: 32px;
   color: var(--title-text-color);
+  cursor: var(--cursor);
+  @extend %transitionColor;
+
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
   @media  (min-width: 480px) {
     font-size: $FontSize34;
   }
@@ -339,16 +348,18 @@ header {
 .mobile__contact--link.mail{ 
   font-weight: var(--font-weight500);
   color: var(--title-text-color);
-  font-size: $FontSize1-45em;
+  font-size: $FontSize24;
   line-height: $LineHeight1-16;
   letter-spacing: $LetterSpacing02;
   margin-bottom: 64px;
-  @extend %transitionTransform ;
-  
-  &:hover,
-  &:focus { 
-    color: var(--accent-color);
-  } 
+ cursor: var(--cursor);
+ @extend %transitionColor;
+
+
+ &:hover,
+ &:focus {
+   color: var(--accent-color);
+ }
 
   @media  (max-width: 480px) {
     font-size: $FontSize24;

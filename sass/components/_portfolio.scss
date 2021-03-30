@@ -141,18 +141,8 @@
   width: fill;
   background-color: var( --white-bg-color); 
   box-sizing: border-box;
-  @extend %transitionBoxShadow;
   margin: 15px;
- 
-  // изминения в размере для моб 290
 
-  &:hover, 
-  &:focus {  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);  
-  } 
-  
-    &:active {
-      fill: transparent;
-    }
     @media  (min-width: 480px){
       max-width: 450px;
     }
